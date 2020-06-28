@@ -52,6 +52,7 @@ type
     Label7: TLabel;
     VertScrollBox1: TVertScrollBox;
     Rectangle1: TRectangle;
+    Bselectionner: TButton;
 
 //    Procedure AfficherArt;
 //    Procedure AfficherArts;
@@ -61,10 +62,13 @@ type
     procedure BRechercheClick(Sender: TObject);
     procedure BFermerClick(Sender: TObject);
     procedure StringGrid1CellClick(const Column: TColumn; const Row: Integer);
+    procedure BselectionnerClick(Sender: TObject);
   private
   public
   selectedRowRecep,selectedRowArt:integer;
-
+  {sadaoui}
+  //oMRPreAchat:TMRPreAchat;
+  {finSadaoui}
 
   end;
 
@@ -195,6 +199,36 @@ begin
   end;
 end;
 
+end;
+
+procedure TFArticleLoc.BselectionnerClick(Sender: TObject);
+var
+oArticleLocDTO:TArticleLocDTO;
+
+begin
+if StringGrid1.Cells[0,selectedRowArt]<>'' then
+begin
+  oArticleLocDTO:=TArticleLocDTO.create;
+  oArticleLocDTO.idarticleloc:=StringGrid1.Cells[0,StringGrid1.Row];
+  TArticleLocDAO.create.loadData(oArticleLocDTO);
+  Main.oTFPreAchat.oMRPreAchat.EdesArticle.text:=oArticleLocDTO.desarticleloc;
+  Main.oTFPreAchat.oMRPreAchat.ELastPrixAchat.text:=FloatToStr(oArticleLocDTO.lastprixachat);
+  Main.oTFPreAchat.oMRPreAchat.ElastQteAchat.text:=FloatToStr(oArticleLocDTO.lastqteachat);
+  Main.oTFPreAchat.oMRPreAchat.EidBarCode.text:=TArticleLocDAO.create.getFirstBarCodeLocDTO(oArticleLocDTO).idbarcodeloc;
+//   ShowMessage(TArticleLocDAO.create.getFirstBarCodeLocDTO(oArticleLocDTO).idbarcodeloc);
+  oArticleLocDTO.DisposeOf;
+  main.TabControl1.ActiveTab:=Main.TMAJAchat;
+  Self.DisposeOf;
+end;
+
+ // oBarCodeLocDTO:=TbarCodeLocDTO.create(EidBarCode.text);
+//oBarCodeLocDAO:=TBarCodeLocDAO.create(oBarCodeLocDTO);
+//oArticleDTO:=oBarCodeLocDAO.getArticleLocDTO(oBarCodeLocDTO);
+
+//ELastPrixAchat.Text:=FloatToStr(oArticleDTO.lastprixachat);
+//ElastQteAchat.Text:=FloatToStr(oArticleDTO.lastqteachat);
+{Sadaoui: afficher le prix par carton}
+//Eprixcarton.Text:= TArticleLocDAO.create.Prixcarton(oArticleDTO).ToString;
 end;
 
 end.

@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
   FMX.Objects, FMX.Controls.Presentation, FMX.Edit, FMX.Layouts,
-  RInventDTOU, DataPak.Android.BarcodeScanner;
+  RInventDTOU, DataPak.Android.BarcodeScanner, FArticleLocU;
 
 type
   TMRPreAchat = class(TFrame)
@@ -28,16 +28,19 @@ type
     Label4: TLabel;
     Label5: TLabel;
     BarcodeScanner1: TBarcodeScanner;
+    BrechArticle: TButton;
     procedure BValidClick(Sender: TObject);
     procedure BDisplayArticleClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure BScanClick(Sender: TObject);
     procedure BarcodeScanner1ScanResult(Sender: TObject; AResult: string);
+    procedure BrechArticleClick(Sender: TObject);
 
   private
     { Déclarations privées }
   public
     oidRPreAchat:integer;
+    oFArticleLoc:TFArticleLoc;
     { Déclarations publiques }
   end;
 
@@ -77,6 +80,18 @@ oBarCodeLocDAO.DisposeOf;
 oArticleDTO.DisposeOf;
 
 
+end;
+
+procedure TMRPreAchat.BrechArticleClick(Sender: TObject);
+begin
+oFArticleLoc:=TFArticleLoc.Create(nil);
+oFArticleLoc.Parent:=Main.LayoutMAJAchat;
+Main.TabControl1.ActiveTab:=Main.TMAJAchat;
+oFArticleLoc.BAjouter.Visible:=False;
+oFArticleLoc.BSupprimer.Visible:=False;
+
+//oFArticleLoc.BRechercheClick(self);
+//oFArticleLoc.StringGrid1CellClick(oFArticleLoc.StringColumn1,0);
 end;
 
 procedure TMRPreAchat.BValidClick(Sender: TObject);

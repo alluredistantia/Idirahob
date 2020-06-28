@@ -173,7 +173,7 @@ object FArticleWeb: TFArticleWeb
             KeyboardType = Alphabet
             TextSettings.Font.Family = '(Default)'
             Enabled = False
-            Size.Width = 309.000000000000000000
+            Size.Width = 293.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'idArticle'
@@ -182,7 +182,7 @@ object FArticleWeb: TFArticleWeb
           object Label1: TLabel
             Align = MostLeft
             StyledSettings = [Style, FontColor]
-            Size.Width = 49.000000000000000000
+            Size.Width = 65.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextSettings.Font.Family = '(Default)'
@@ -204,7 +204,7 @@ object FArticleWeb: TFArticleWeb
             TabOrder = 3
             KeyboardType = NumberPad
             TextSettings.Font.Family = '(Default)'
-            Size.Width = 301.000000000000000000
+            Size.Width = 293.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'Prix achat'
@@ -213,7 +213,7 @@ object FArticleWeb: TFArticleWeb
           object Label2: TLabel
             Align = MostLeft
             StyledSettings = [Style, FontColor]
-            Size.Width = 57.000000000000000000
+            Size.Width = 65.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextSettings.Font.Family = '(Default)'
@@ -235,7 +235,7 @@ object FArticleWeb: TFArticleWeb
             TabOrder = 3
             KeyboardType = NumberPad
             TextSettings.Font.Family = '(Default)'
-            Size.Width = 301.000000000000000000
+            Size.Width = 293.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'Prix vente'
@@ -244,7 +244,7 @@ object FArticleWeb: TFArticleWeb
           object Label3: TLabel
             Align = MostLeft
             StyledSettings = [Style, FontColor]
-            Size.Width = 57.000000000000000000
+            Size.Width = 65.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextSettings.Font.Family = '(Default)'
@@ -296,7 +296,7 @@ object FArticleWeb: TFArticleWeb
             TabOrder = 3
             KeyboardType = NumberPad
             TextSettings.Font.Family = '(Default)'
-            Size.Width = 301.000000000000000000
+            Size.Width = 293.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'Qt'#233' achat'
@@ -305,7 +305,7 @@ object FArticleWeb: TFArticleWeb
           object Label5: TLabel
             Align = MostLeft
             StyledSettings = [Style, FontColor]
-            Size.Width = 57.000000000000000000
+            Size.Width = 65.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextSettings.Font.Family = '(Default)'
@@ -327,7 +327,7 @@ object FArticleWeb: TFArticleWeb
             TabOrder = 3
             TextSettings.Font.Family = '(Default)'
             Enabled = False
-            Size.Width = 301.000000000000000000
+            Size.Width = 293.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'Qt'#233' Stock'
@@ -336,7 +336,7 @@ object FArticleWeb: TFArticleWeb
           object Label6: TLabel
             Align = MostLeft
             StyledSettings = [Style, FontColor]
-            Size.Width = 57.000000000000000000
+            Size.Width = 65.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextSettings.Font.Family = '(Default)'

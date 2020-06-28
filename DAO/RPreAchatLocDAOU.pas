@@ -158,16 +158,22 @@ begin
   try
     if not isExist(vRPreAchatLocDTO) then
     begin
-      Connection:=Main.oconnection;
-      SQL.Add('insert into rpreachatloc(idrpreachatloc,idpreachatloc,idbarcodeloc,');
-      SQL.Add( ' qtepreachatloc,prixpreachatloc) values (');
-      SQL.Add(QuotedStr(IntToStr(vRPreAchatLocDTO.idrpreachatloc))+',');
-      SQL.Add(QuotedStr(IntToStr(vRPreAchatLocDTO.idpreachatloc))+',');
-      SQL.Add(QuotedStr(vRPreAchatLocDTO.idbarcodeloc)+',');
-      SQL.Add(QuotedStr(FloatToStr(vRPreAchatLocDTO.qtepreachatloc))+',');
-      SQL.Add(QuotedStr(FloatToStr(vRPreAchatLocDTO.prixpreachatloc))+')');
+     if vRPreAchatLocDTO.idbarcodeloc<>'' then
+     begin
+        Connection:=Main.oconnection;
+        SQL.Add('insert into rpreachatloc(idrpreachatloc,idpreachatloc,idbarcodeloc,');
+        SQL.Add( ' qtepreachatloc,prixpreachatloc) values (');
+        SQL.Add(QuotedStr(IntToStr(vRPreAchatLocDTO.idrpreachatloc))+',');
+        SQL.Add(QuotedStr(IntToStr(vRPreAchatLocDTO.idpreachatloc))+',');
+        SQL.Add(QuotedStr(vRPreAchatLocDTO.idbarcodeloc)+',');
+        SQL.Add(QuotedStr(FloatToStr(vRPreAchatLocDTO.qtepreachatloc))+',');
+        SQL.Add(QuotedStr(FloatToStr(vRPreAchatLocDTO.prixpreachatloc))+')');
 
       ExecSQL;
+      end else
+      begin
+      ShowMessage('Codebarre obligatoire');
+     end;
     end else
     begin
       Connection:=Main.oconnection;

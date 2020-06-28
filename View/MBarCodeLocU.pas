@@ -76,6 +76,7 @@ oFArticleLoc.Parent:=Main.LayoutMAJAchat;
 Main.TabControl1.ActiveTab:=Main.TMAJAchat;
 oFArticleLoc.EidArticleRech.Text:=Self.EidArticle.Text;
 oFArticleLoc.EdesArticleRech.text:=EDesArticle.Text;
+oFArticleLoc.Bselectionner.Visible:=False;
 oFArticleLoc.BRechercheClick(self);
 oFArticleLoc.StringGrid1CellClick(oFArticleLoc.StringColumn1,0);
 end;

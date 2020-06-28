@@ -7,7 +7,7 @@ uses
   ArticleLocDTOU, APIUtilsU, FireDAC.UI.Intf, FireDAC.FMXUI.Wait,
   FireDAC.Stan.Intf, FireDAC.Comp.UI, FireDAC.Stan.ExprFuncs,
   FireDAC.Phys.SQLiteDef, FireDAC.Phys, FireDAC.Phys.SQLite,
-  FireDAC.Comp.Client, IOUtils, System.Generics.Collections;
+  FireDAC.Comp.Client, IOUtils, System.Generics.Collections, BarCodeLocDTOU;
 
 type TListArticleLocDTO=TObjectList<TArticleLocDTO>;
 type TArticleLocDAO=class(TObject)
@@ -31,6 +31,9 @@ procedure deleteAll;
 {sadaoui :ajouter prix de carton}
 function Prixcarton(varticleLocDTO:TArticleLocDTO):double;
 {fin sadaoui}
+{sadaoui :ajouter prix de carton}
+function getFirstBarCodeLocDTO(vArticlelocDTO:TArticleLocDTO): TBarCodeLocDTO;
+{fin sadaoui}
 end;
 
 
@@ -38,7 +41,7 @@ implementation
 
 uses
   System.SysUtils, FMX.Dialogs, UConnection, MainU, ArticleWebDAOU,
-  ArticleWebDTOU;
+  ArticleWebDTOU, BarCodeLocDAOU;
 
 { ArticleLocDAO }
 
@@ -180,6 +183,31 @@ begin
 //  oArticleLocDTO.DisposeOf;
 end;
 Result:=oListArticleLocDTO;
+end;
+
+function TArticleLocDAO.getFirstBarCodeLocDTO(
+  vArticlelocDTO: TArticleLocDTO): TBarCodeLocDTO;
+  var obarcodeLocDTO:TBarCodeLocDTO;
+begin
+with TFdQuery.Create(nil) do
+begin
+
+  try
+  Connection:=Main.oconnection;
+  SQL.Add('select * from tbarcodeloc where idarticleloc='+
+  QuotedStr(varticleLocDTO.idarticleloc));
+  Active:=true;
+  obarcodeLocDTO:=TBarCodeLocDTO.create;
+  obarcodeLocDTO.idarticleloc:=FieldByName('idarticleloc').AsString;
+    obarcodeLocDTO.idbarcodeloc:=FieldByName('idbarcodeloc').AsString;
+  //ShowMessage(obarcodeLocDTO.idbarcodeloc);
+  Result:=obarcodeLocDTO;
+  Active:=false;
+  finally
+    Active:=false;
+    DisposeOf;
+  end;
+end;
 end;
 
 procedure TArticleLocDAO.deleteAll;

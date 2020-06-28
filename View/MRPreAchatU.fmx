@@ -25,7 +25,7 @@ object MRPreAchat: TMRPreAchat
       TabOrder = 3
       ReadOnly = True
       TextSettings.HorzAlign = Trailing
-      Position.Y = 89.000000000000000000
+      Position.Y = 121.000000000000000000
       Size.Width = 332.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
@@ -35,13 +35,13 @@ object MRPreAchat: TMRPreAchat
         Size.Width = 120.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
-        Text = 'D'#233'signation'
+        Text = 'D'#233'signation:'
         TabOrder = 0
       end
     end
     object Rectangle1: TRectangle
       Align = Top
-      Position.Y = 199.000000000000000000
+      Position.Y = 231.000000000000000000
       Size.Width = 332.000000000000000000
       Size.Height = 58.000000000000000000
       Size.PlatformDefault = False
@@ -73,7 +73,7 @@ object MRPreAchat: TMRPreAchat
       KeyboardType = NumbersAndPunctuation
       ReadOnly = True
       TextSettings.HorzAlign = Trailing
-      Position.Y = 111.000000000000000000
+      Position.Y = 143.000000000000000000
       Size.Width = 332.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
@@ -93,7 +93,7 @@ object MRPreAchat: TMRPreAchat
       TabOrder = 1
       KeyboardType = NumberPad
       TextSettings.HorzAlign = Trailing
-      Position.Y = 133.000000000000000000
+      Position.Y = 165.000000000000000000
       Size.Width = 332.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
@@ -123,7 +123,7 @@ object MRPreAchat: TMRPreAchat
       TabOrder = 0
       KeyboardType = NumberPad
       TextSettings.HorzAlign = Trailing
-      Position.Y = 177.000000000000000000
+      Position.Y = 209.000000000000000000
       Size.Width = 332.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
@@ -152,7 +152,7 @@ object MRPreAchat: TMRPreAchat
       TabOrder = 8
       ReadOnly = True
       TextSettings.HorzAlign = Trailing
-      Position.Y = 155.000000000000000000
+      Position.Y = 187.000000000000000000
       Size.Width = 332.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
@@ -166,11 +166,21 @@ object MRPreAchat: TMRPreAchat
         TabOrder = 0
       end
     end
+    object BrechArticle: TButton
+      Align = Top
+      Position.Y = 89.000000000000000000
+      Size.Width = 332.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      Text = 'Selectionner Article'
+      OnClick = BrechArticleClick
+    end
   end
   object BarcodeScanner1: TBarcodeScanner
     BarcodeTypes = [btOneD, btQRCode, btProduct, btDataMatrix]
     OnScanResult = BarcodeScanner1ScanResult
-    Left = 152
-    Top = 240
+    Left = 160
+    Top = 312
   end
 end
