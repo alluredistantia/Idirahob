@@ -7,25 +7,25 @@
     <Transaction>2019/09/09 13:41:15.000.417,C:\KManagInfo\TestDev\GSuperMobileCompose\Unit2.fmx=C:\Users\pc\Documents\Embarcadero\Studio\Projets\Unit2.fmx</Transaction>
     <Transaction>2019/09/09 13:41:15.000.417,C:\KManagInfo\TestDev\GSuperMobileCompose\Unit2.pas=C:\Users\pc\Documents\Embarcadero\Studio\Projets\Unit2.pas</Transaction>
     <Transaction>2019/09/09 13:41:16.000.866,C:\KManagInfo\TestDev\GSuperMobileCompose\Project2.dproj=C:\Users\pc\Documents\Embarcadero\Studio\Projets\Project2.dproj</Transaction>
+    <Transaction>2019/09/09 13:46:58.000.176,=C:\KManagInfo\TestDev\GSuperMobileCompose\CFournisseurU.pas</Transaction>
+    <Transaction>2019/09/09 13:46:58.000.190,=C:\KManagInfo\TestDev\GSuperMobileCompose\CReceptionU.pas</Transaction>
+    <Transaction>2019/09/09 13:46:58.000.165,=C:\KManagInfo\TestDev\GSuperMobileCompose\CArticleU.pas</Transaction>
+    <Transaction>2019/09/09 13:46:58.000.933,=C:\KManagInfo\TestDev\GSuperMobileCompose\MAJDTLU.pas</Transaction>
     <Transaction>2019/09/09 13:46:58.000.154,=C:\KManagInfo\TestDev\GSuperMobileCompose\CAchatU.pas</Transaction>
     <Transaction>2019/09/09 13:46:58.000.589,=C:\KManagInfo\TestDev\GSuperMobileCompose\MainU.pas</Transaction>
-    <Transaction>2019/09/09 13:46:58.000.165,=C:\KManagInfo\TestDev\GSuperMobileCompose\CArticleU.pas</Transaction>
-    <Transaction>2019/09/09 13:46:58.000.824,=C:\KManagInfo\TestDev\GSuperMobileCompose\MAJAchatU.pas</Transaction>
-    <Transaction>2019/09/09 13:46:58.000.933,=C:\KManagInfo\TestDev\GSuperMobileCompose\MAJDTLU.pas</Transaction>
-    <Transaction>2019/09/09 13:46:58.000.176,=C:\KManagInfo\TestDev\GSuperMobileCompose\CFournisseurU.pas</Transaction>
     <Transaction>2019/09/09 13:46:58.000.135,=C:\KManagInfo\TestDev\GSuperMobileCompose\BLConsltU.pas</Transaction>
-    <Transaction>2019/09/09 13:46:58.000.190,=C:\KManagInfo\TestDev\GSuperMobileCompose\CReceptionU.pas</Transaction>
+    <Transaction>2019/09/09 13:46:58.000.824,=C:\KManagInfo\TestDev\GSuperMobileCompose\MAJAchatU.pas</Transaction>
     <Transaction>2019/09/09 13:47:43.000.589,=C:\KManagInfo\TestDev\GSuperMobileCompose\Classes\StringUtilsU.pas</Transaction>
     <Transaction>2019/09/09 13:48:45.000.119,C:\KManagInfo\TestDev\GSuperMobileCompose\Unit2.pas=</Transaction>
     <Transaction>2019/09/21 19:58:58.000.307,C:\KmanagInfo\TestDev\GMGComSup1.0\Client\MAJArticleU.fmx=C:\KmanagInfo\TestDev\GMGComSup1.0\Client\MAJDTLU.fmx</Transaction>
     <Transaction>2019/09/21 19:58:58.000.307,C:\KmanagInfo\TestDev\GMGComSup1.0\Client\MAJArticleU.pas=C:\KmanagInfo\TestDev\GMGComSup1.0\Client\MAJDTLU.pas</Transaction>
     <Transaction>2019/09/21 19:59:29.000.678,=C:\KmanagInfo\TestDev\GMGComSup1.0\Client\MAJDTLU.pas</Transaction>
-    <Transaction>2019/09/21 20:51:22.000.622,C:\KmanagInfo\TestDev\GMGComSup1.0\Client\MAJDTLU.pas=C:\KmanagInfo\TestDev\GMGComSup1.0\Client\MAJArticleU.pas</Transaction>
     <Transaction>2019/09/21 20:51:22.000.622,C:\KmanagInfo\TestDev\GMGComSup1.0\Client\MAJDTLU.fmx=C:\KmanagInfo\TestDev\GMGComSup1.0\Client\MAJArticleU.fmx</Transaction>
+    <Transaction>2019/09/21 20:51:22.000.622,C:\KmanagInfo\TestDev\GMGComSup1.0\Client\MAJDTLU.pas=C:\KmanagInfo\TestDev\GMGComSup1.0\Client\MAJArticleU.pas</Transaction>
     <Transaction>2019/09/21 20:52:02.000.157,=C:\KmanagInfo\TestDev\GMGComSup1.0\Client\MAJDTLU.pas</Transaction>
     <Transaction>2019/09/24 00:37:41.000.217,C:\KmanagInfo\TestDev\GMGComSup1.0\Client\MobileSup.dproj=C:\KmanagInfo\TestDev\GMGComSup1.0\Client\Project2.dproj</Transaction>
-    <Transaction>2019/10/30 18:22:28.000.121,C:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\BLConsltU.pas=C:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\ArticleConsultU.pas</Transaction>
     <Transaction>2019/10/30 18:22:28.000.149,C:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\BLConsltU.fmx=C:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\ArticleConsultU.fmx</Transaction>
+    <Transaction>2019/10/30 18:22:28.000.121,C:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\BLConsltU.pas=C:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\ArticleConsultU.pas</Transaction>
     <Transaction>2019/10/30 18:23:30.000.027,=C:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\BLConsltU.pas</Transaction>
     <Transaction>2019/10/30 21:10:00.000.326,C:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\CArticle1U.pas=C:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\CArticleU.pas</Transaction>
     <Transaction>2019/10/30 21:10:20.000.513,=C:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\Unit1.pas</Transaction>
@@ -87,8 +87,8 @@
     <Transaction>2020/01/29 18:17:59.000.077,E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\Unit1.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\MInventU.pas</Transaction>
     <Transaction>2020/01/29 18:17:59.000.097,E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\Unit1.fmx=E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\MInventU.fmx</Transaction>
     <Transaction>2020/02/02 18:04:07.000.268,=E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\Unit1.pas</Transaction>
-    <Transaction>2020/02/02 18:46:43.000.256,E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\Unit1.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\MRInventU.pas</Transaction>
     <Transaction>2020/02/02 18:46:43.000.289,E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\Unit1.fmx=E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\MRInventU.fmx</Transaction>
+    <Transaction>2020/02/02 18:46:43.000.256,E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\Unit1.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\MRInventU.pas</Transaction>
     <Transaction>2020/02/02 18:54:15.000.654,=E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\Unit1.pas</Transaction>
     <Transaction>2020/02/02 18:57:00.000.819,E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\Unit1.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\Model\RInventDTO.pas</Transaction>
     <Transaction>2020/02/02 19:05:11.000.438,=E:\KmanagInfo\TestDev\GMGComSup1.0SB\Client\Unit1.pas</Transaction>
@@ -107,12 +107,12 @@
     <Transaction>2020/04/29 02:51:37.000.912,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\DAO\InventDAO.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\DAO\InventDAOU.pas</Transaction>
     <Transaction>2020/04/29 02:54:58.000.139,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\DAO\RInventDAOU.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\DAO\RInventDAO.pas</Transaction>
     <Transaction>2020/05/17 02:06:38.000.113,=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\ClassesUtils\UClassUtils.pas</Transaction>
-    <Transaction>2020/05/17 02:16:34.000.085,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\ClassesUtils\UClassUtils.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\ClassesUtils\UConnection.pas</Transaction>
     <Transaction>2020/05/17 02:16:34.000.085,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\ClassesUtils\UClassUtils.dfm=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\ClassesUtils\UConnection.dfm</Transaction>
-    <Transaction>2020/05/17 04:12:03.000.855,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\FArticleWebU.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\FArticleU.pas</Transaction>
+    <Transaction>2020/05/17 02:16:34.000.085,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\ClassesUtils\UClassUtils.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\ClassesUtils\UConnection.pas</Transaction>
     <Transaction>2020/05/17 04:12:03.000.876,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\FArticleWebU.fmx=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\FArticleU.fmx</Transaction>
-    <Transaction>2020/05/17 04:16:56.000.300,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\FArticleLocU.fmx=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\FArticleWebU.fmx</Transaction>
+    <Transaction>2020/05/17 04:12:03.000.855,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\FArticleWebU.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\FArticleU.pas</Transaction>
     <Transaction>2020/05/17 04:16:56.000.295,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\FArticleLocU.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\FArticleWebU.pas</Transaction>
+    <Transaction>2020/05/17 04:16:56.000.300,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\FArticleLocU.fmx=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\FArticleWebU.fmx</Transaction>
     <Transaction>2020/05/17 04:19:24.000.198,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\Model\ArticleWebDTOU.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\model\ArticleDTOU.pas</Transaction>
     <Transaction>2020/05/17 04:19:45.000.431,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\Model\ArticleLocDTOU.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\Model\ArticleWebDTOU.pas</Transaction>
     <Transaction>2020/05/17 04:21:19.000.028,=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\Model\ArticleWebDTOU.pas</Transaction>
@@ -121,8 +121,8 @@
     <Transaction>2020/05/17 05:06:03.000.066,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\DAO\ArticleWebDAOU.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\DAO\ArticleLocDAOU.pas</Transaction>
     <Transaction>2020/05/17 05:09:39.000.390,=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\DAO\ArticleLocDAOU.pas</Transaction>
     <Transaction>2020/05/19 05:04:33.000.533,=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\TestArticleWebDAOU.pas</Transaction>
-    <Transaction>2020/05/23 12:07:55.000.820,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\MBarCodeWebU.fmx=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\MBarCodeU.fmx</Transaction>
     <Transaction>2020/05/23 12:07:55.000.818,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\MBarCodeWebU.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\MBarCodeU.pas</Transaction>
+    <Transaction>2020/05/23 12:07:55.000.820,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\MBarCodeWebU.fmx=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\MBarCodeU.fmx</Transaction>
     <Transaction>2020/05/23 12:37:07.000.828,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\MBarCodeLocU.fmx=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\MBarCodeWebU.fmx</Transaction>
     <Transaction>2020/05/23 12:37:07.000.828,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\MBarCodeLocU.pas=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\MBarCodeWebU.pas</Transaction>
     <Transaction>2020/05/23 12:38:26.000.302,=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\MBarCodeWebU.pas</Transaction>
@@ -134,8 +134,8 @@
     <Transaction>2020/05/23 23:47:42.000.534,E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\MInventU.pas=</Transaction>
     <Transaction>2020/05/23 23:48:39.000.324,=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\View\MInventU.pas</Transaction>
     <Transaction>2020/05/24 00:16:03.000.117,=E:\KmanagInfo\TestDev\GMGComSup1.0SB\MobiMarket\Model\BarCodeLocDTOU.pas</Transaction>
-    <Transaction>2020/06/06 17:32:32.000.898,F:\RAD projets\MobiMarket\View\FInventU.pas=F:\RAD projets\MobiMarket\View\FPreAchatU.pas</Transaction>
     <Transaction>2020/06/06 17:32:32.000.976,F:\RAD projets\MobiMarket\View\FInventU.fmx=F:\RAD projets\MobiMarket\View\FPreAchatU.fmx</Transaction>
+    <Transaction>2020/06/06 17:32:32.000.898,F:\RAD projets\MobiMarket\View\FInventU.pas=F:\RAD projets\MobiMarket\View\FPreAchatU.pas</Transaction>
     <Transaction>2020/06/06 17:34:13.000.245,=F:\RAD projets\MobiMarket\View\FInventU.pas</Transaction>
     <Transaction>2020/06/06 17:40:00.000.844,=F:\RAD projets\MobiMarket\Unit1.pas</Transaction>
     <Transaction>2020/06/06 17:48:19.000.036,F:\RAD projets\MobiMarket\Unit1.pas=F:\RAD projets\MobiMarket\Model\PreAchatLocDTOU.pas</Transaction>
@@ -159,6 +159,7 @@
     <Transaction>2020/06/15 14:28:57.000.706,E:\KmanagInfo\TestDev\MobiMarket\Win32\Debug\MetropolisUIBlue.Style=</Transaction>
     <Transaction>2020/06/21 21:25:01.000.384,E:\KmanagInfo\TestDev\MobiMarket\dev\MobiMarket\MobiMarket_1_2.dproj=E:\KmanagInfo\TestDev\MobiMarket\dev\MobiMarket\MobiMarket.dproj</Transaction>
     <Transaction>2020/06/21 23:49:08.000.696,=E:\KmanagInfo\TestDev\MobiMarket\dev\MobiMarket\Unit1.pas</Transaction>
+    <Transaction>2020/06/27 22:51:56.000.969,E:\KmanagInfo\TestDev\MobiMarket\dev\MobiMarket\MobiMarket_1_2.dproj=E:\KmanagInfo\TestDev\MobiMarket\dev\MobiMarket\MobiMarket_1_3.dproj</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
 		<NoProfile iOSSimulator="iPhone5" Android=""/>

@@ -128,7 +128,7 @@ object Main: TMain
         Size.Width = 356.000000000000000000
         Size.Height = 23.000000000000000000
         Size.PlatformDefault = False
-        Text = 'Version 1.2'
+        Text = 'Version 1.3'
         TabOrder = 2
       end
     end
