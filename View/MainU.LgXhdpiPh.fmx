@@ -41,6 +41,9 @@ inherited Main_LgXhdpiPh: TMain_LgXhdpiPh
         inherited BpreAchat: TButton
           Size.Width = 450.000000000000000000
         end
+        inherited Bbonliv: TButton
+          Size.Width = 450.000000000000000000
+        end
       end
       inherited Label1: TLabel
         Size.Width = 450.000000000000000000

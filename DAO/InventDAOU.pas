@@ -1,5 +1,4 @@
 unit InventDAOU;
-
 interface
 
 uses

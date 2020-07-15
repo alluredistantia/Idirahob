@@ -44,6 +44,9 @@ inherited Main_iPhone55in: TMain_iPhone55in
         inherited BpreAchat: TButton
           Size.Width = 414.000000000000000000
         end
+        inherited Bbonliv: TButton
+          Size.Width = 414.000000000000000000
+        end
       end
       inherited Label1: TLabel
         Size.Width = 414.000000000000000000

@@ -12,7 +12,7 @@ uses
   ReqRecetteDTOU in 'Model\ReqRecetteDTOU.pas',
   ReqRecetteDAOU in 'DAO\ReqRecetteDAOU.pas',
   InventDTOU in 'Model\InventDTOU.pas',
-  InventDAOU in 'DAO\InventDAOU.pas',
+  BonlivWebDAOU in 'DAO\BonlivWebDAOU.pas',
   RInventDTOU in 'Model\RInventDTOU.pas',
   RPreAchatLocDAOU in 'DAO\RPreAchatLocDAOU.pas',
   UConnection in 'ClassesUtils\UConnection.pas' {Connection: TDataModule},
@@ -36,6 +36,11 @@ uses
   PreAchatLocDAOU in 'DAO\PreAchatLocDAOU.pas',
   StringUtilsU in 'ClassesUtils\StringUtilsU.pas',
   MRInventU in 'View\MRInventU.pas' {MRInvent: TFrame},
+  RBonLivWabDAOU in 'DAO\RBonLivWabDAOU.pas',
+  FBonLivraisonU in 'View\FBonLivraisonU.pas' {FBonLivraison: TFrame},
+  BonLivWebDTOU in 'Model\BonLivWebDTOU.pas',
+  RBonLivWebDTOU in 'Model\RBonLivWebDTOU.pas',
+  InventDAOU in 'DAO\InventDAOU.pas',
   RInventDAOU in 'DAO\RInventDAOU.pas';
 
 {$R *.res}

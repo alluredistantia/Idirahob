@@ -42,7 +42,7 @@ object Main: TMain
       object Rectangle2: TRectangle
         Align = Top
         Fill.Color = xFFE8E8E8
-        Position.Y = 265.000000000000000000
+        Position.Y = 305.000000000000000000
         Size.Width = 356.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -60,7 +60,7 @@ object Main: TMain
         Align = Top
         Fill.Color = xFFC4B21B
         Size.Width = 356.000000000000000000
-        Size.Height = 265.000000000000000000
+        Size.Height = 305.000000000000000000
         Size.PlatformDefault = False
         object BCodeBarreWeb: TButton
           Align = Top
@@ -73,9 +73,9 @@ object Main: TMain
         end
         object BClose: TButton
           Align = Top
-          Position.Y = 215.000000000000000000
+          Position.Y = 258.000000000000000000
           Size.Width = 356.000000000000000000
-          Size.Height = 43.000000000000000000
+          Size.Height = 39.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
           Text = 'Fermer'
@@ -83,7 +83,7 @@ object Main: TMain
         end
         object BRecette: TButton
           Align = Top
-          Position.Y = 86.000000000000000000
+          Position.Y = 129.000000000000000000
           Size.Width = 356.000000000000000000
           Size.Height = 43.000000000000000000
           Size.PlatformDefault = False
@@ -93,7 +93,7 @@ object Main: TMain
         end
         object BInvent: TButton
           Align = Top
-          Position.Y = 129.000000000000000000
+          Position.Y = 172.000000000000000000
           Size.Width = 356.000000000000000000
           Size.Height = 43.000000000000000000
           Size.PlatformDefault = False
@@ -103,7 +103,7 @@ object Main: TMain
         end
         object BCodeBarreLoc: TButton
           Align = Top
-          Position.Y = 43.000000000000000000
+          Position.Y = 86.000000000000000000
           Size.Width = 356.000000000000000000
           Size.Height = 43.000000000000000000
           Size.PlatformDefault = False
@@ -113,7 +113,7 @@ object Main: TMain
         end
         object BpreAchat: TButton
           Align = Top
-          Position.Y = 172.000000000000000000
+          Position.Y = 215.000000000000000000
           Size.Width = 356.000000000000000000
           Size.Height = 43.000000000000000000
           Size.PlatformDefault = False
@@ -121,10 +121,20 @@ object Main: TMain
           Text = 'Pres Achat '
           OnClick = BpreAchatClick
         end
+        object Bbonliv: TButton
+          Align = Top
+          Position.Y = 43.000000000000000000
+          Size.Width = 356.000000000000000000
+          Size.Height = 43.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          Text = 'Bon de Livraison'
+          OnClick = BbonlivClick
+        end
       end
       object Label1: TLabel
         Align = Top
-        Position.Y = 297.000000000000000000
+        Position.Y = 337.000000000000000000
         Size.Width = 356.000000000000000000
         Size.Height = 23.000000000000000000
         Size.PlatformDefault = False
@@ -180,8 +190,8 @@ object Main: TMain
   object RESTClient1: TRESTClient
     Params = <>
     HandleRedirects = True
-    Left = 120
-    Top = 240
+    Left = 112
+    Top = 336
   end
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'FMX'

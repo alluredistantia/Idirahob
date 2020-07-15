@@ -11,7 +11,7 @@ uses
   , MBarCodeWebU, FRecetteU, FInventU, FMX.ScrollBox, FMX.Memo, MBarCodeLocU,
   UConnection, FireDAC.UI.Intf, FireDAC.FMXUI.Wait, FireDAC.Stan.ExprFuncs,
   FireDAC.Phys.SQLiteDef, FireDAC.Phys, FireDAC.Phys.SQLite, FireDAC.Stan.Intf,
-  FireDAC.Comp.UI, FireDAC.Comp.Client, FPreAchatU, IOUtils;
+  FireDAC.Comp.UI, FireDAC.Comp.Client, FPreAchatU, IOUtils, FBonLivraisonU;
 
 type
   TMain = class(TForm)
@@ -34,6 +34,7 @@ type
     FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
     BpreAchat: TButton;
     LayoutAchat: TFramedVertScrollBox;
+    Bbonliv: TButton;
     procedure FormCreate(Sender: TObject);
     procedure BCloseClick(Sender: TObject);
     procedure BCodeBarreWebClick(Sender: TObject);
@@ -41,6 +42,7 @@ type
     procedure BInventClick(Sender: TObject);
     procedure BCodeBarreLocClick(Sender: TObject);
     procedure BpreAchatClick(Sender: TObject);
+    procedure BbonlivClick(Sender: TObject);
   private
     { Déclarations privées }
   public
@@ -50,6 +52,7 @@ type
   oTFInvent:TFInvent;
   oconnection:TFDConnection;
   oTFPreAchat:TFPreAchat;
+  oTFBonLiv:TFBonLivraison;
 //    OMAJAchat:TMAJAchat;
 //    OMAJDTL:TMAJDTL;
 
@@ -74,6 +77,14 @@ uses
 {$R *.LgXhdpiPh.fmx ANDROID}
 {$R *.NmXhdpiPh.fmx ANDROID}
 {$R *.iPhone4in.fmx IOS}
+
+procedure TMain.BbonlivClick(Sender: TObject);
+begin
+oTFBonLiv:=TFBonLivraison.Create(nil);
+oTFBonLiv.Parent:=Main.LayoutAchat;
+Main.TabControl1.ActiveTab:=Main.TAchat;
+oTFBonLiv.afficherEntete;
+end;
 
 procedure TMain.BCloseClick(Sender: TObject);
 begin
