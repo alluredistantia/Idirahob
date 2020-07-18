@@ -19,7 +19,7 @@ uses
   ArticleWebDTOU in 'Model\ArticleWebDTOU.pas',
   ArticleLocDAOU in 'DAO\ArticleLocDAOU.pas',
   FArticleLocU in 'View\FArticleLocU.pas' {FArticleLoc: TFrame},
-  FArticleWebU in 'View\FArticleWebU.pas' {FArticleWeb: TFrame},
+  FFourWebU in 'View\FFourWebU.pas' {FFourWeb: TFrame},
   FPreAchatU in 'View\FPreAchatU.pas' {FPreAchat: TFrame},
   FRecetteU in 'View\FRecetteU.pas' {FRecette: TFrame},
   MainU in 'View\MainU.pas' {Main},
@@ -41,7 +41,11 @@ uses
   BonLivWebDTOU in 'Model\BonLivWebDTOU.pas',
   RBonLivWebDTOU in 'Model\RBonLivWebDTOU.pas',
   InventDAOU in 'DAO\InventDAOU.pas',
-  RInventDAOU in 'DAO\RInventDAOU.pas';
+  RInventDAOU in 'DAO\RInventDAOU.pas',
+  FourWebDTOU in 'Model\FourWebDTOU.pas',
+  MBonLivU in 'View\MBonLivU.pas' {MBonLiv: TFrame},
+  FArticleWebU in 'View\FArticleWebU.pas' {FArticleWeb: TFrame},
+  FourWebDAOU in 'DAO\FourWebDAOU.pas';
 
 {$R *.res}
 

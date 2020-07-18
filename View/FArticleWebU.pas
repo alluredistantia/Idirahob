@@ -7,7 +7,8 @@ uses
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
   System.Rtti, FMX.Grid.Style, IPPeerClient, REST.Client, Data.Bind.Components,
   Data.Bind.ObjectScope, FMX.Grid, FMX.ScrollBox, FMX.Edit, FMX.Controls.Presentation,
-  FMX.Objects, FMX.Layouts, System.Classes, System.Generics.Collections;
+  FMX.Objects, FMX.Layouts, System.Classes, System.Generics.Collections,
+  FMX.Menus;
 
 type
   TFArticleWeb = class(TFrame)
@@ -52,6 +53,7 @@ type
     VertScrollBox1: TVertScrollBox;
     StringColumn7: TStringColumn;
     StringColumn8: TStringColumn;
+    MenuBar1: TMenuBar;
 
 //    Procedure AfficherArt;
 //    Procedure AfficherArts;

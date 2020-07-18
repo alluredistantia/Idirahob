@@ -1,0 +1,251 @@
+object FFourWeb: TFFourWeb
+  Align = Center
+  Size.Width = 367.000000000000000000
+  Size.Height = 470.000000000000000000
+  Size.PlatformDefault = False
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 367.000000000000000000
+    Size.Height = 470.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object VertScrollBox1: TVertScrollBox
+      Align = Client
+      Size.Width = 367.000000000000000000
+      Size.Height = 470.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 367.000000000000000000
+      Viewport.Height = 470.000000000000000000
+      object RecButtons: TRectangle
+        Align = Bottom
+        Position.Y = 328.000000000000000000
+        Size.Width = 367.000000000000000000
+        Size.Height = 142.000000000000000000
+        Size.PlatformDefault = False
+        object BAjouter: TButton
+          Align = MostTop
+          Size.Width = 367.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Sauvegarder'
+          OnClick = BAjouterClick
+        end
+        object BFermer: TButton
+          Align = MostTop
+          Position.Y = 98.000000000000000000
+          Size.Width = 367.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Fermer'
+          OnClick = BFermerClick
+        end
+        object BSupprimer: TButton
+          Align = MostTop
+          Position.Y = 65.000000000000000000
+          Size.Width = 367.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Supprimer'
+          OnClick = BSupprimerClick
+        end
+        object Bselect: TButton
+          Align = MostTop
+          Position.Y = 33.000000000000000000
+          Size.Width = 367.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = 'Selectionner'
+        end
+      end
+      object RRecherche: TRectangle
+        Align = Top
+        Padding.Left = 4.000000000000000000
+        Padding.Top = 4.000000000000000000
+        Padding.Right = 4.000000000000000000
+        Padding.Bottom = 4.000000000000000000
+        Size.Width = 367.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        object EdesArticleRech: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Client
+          TabOrder = 0
+          Size.Width = 201.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Text recherche Fournisseur'
+        end
+        object EidArticleRech: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Left
+          TabOrder = 1
+          TextSettings.Font.Size = 11.000000000000000000
+          Position.X = 4.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 68.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Code'
+          StyledSettings = [Family, Style, FontColor]
+        end
+        object BRecherche: TButton
+          Align = Right
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 273.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 90.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Rechercher'
+          TextSettings.Font.Size = 11.000000000000000000
+          OnClick = BRechercheClick
+        end
+      end
+      object StringGrid1: TStringGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Size.Width = 367.000000000000000000
+        Size.Height = 165.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Family, Style, FontColor]
+        TabOrder = 2
+        Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+        OnCellClick = StringGrid1CellClick
+        Viewport.Width = 347.000000000000000000
+        Viewport.Height = 140.000000000000000000
+        object StringColumn1: TStringColumn
+          Header = 'IdFour'
+          Size.Width = 57.000000000000000000
+        end
+        object StringColumn2: TStringColumn
+          Header = 'desFournisseur'
+          Size.Width = 199.000000000000000000
+        end
+        object StringColumn3: TStringColumn
+          Header = 'Tel'
+          Size.Width = 87.000000000000000000
+        end
+      end
+      object Rectangle2: TRectangle
+        Align = Bottom
+        Fill.Kind = Gradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFF3DBA8E
+            Offset = 0.000000000000000000
+          end
+          item
+            Color = claWhite
+            Offset = 1.000000000000000000
+          end>
+        Fill.Gradient.StartPosition.X = 0.500000000000000000
+        Fill.Gradient.StartPosition.Y = 1.000000000000000000
+        Fill.Gradient.StopPosition.X = 0.499999970197677600
+        Fill.Gradient.StopPosition.Y = 0.000000000000000000
+        Position.Y = 205.000000000000000000
+        Size.Width = 367.000000000000000000
+        Size.Height = 123.000000000000000000
+        Size.PlatformDefault = False
+        object LayIdFour: TLayout
+          Align = MostTop
+          Size.Width = 367.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object EidFour: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 3
+            KeyboardType = Alphabet
+            TextSettings.Font.Family = '(Default)'
+            Enabled = False
+            Size.Width = 302.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = 'id Fournisseur'
+            StyledSettings = [Style, FontColor]
+          end
+          object Label1: TLabel
+            Align = MostLeft
+            StyledSettings = [Style, FontColor]
+            Size.Width = 65.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = '(Default)'
+            TextSettings.Font.Size = 11.000000000000000000
+            Text = 'idArticle'
+            TabOrder = 1
+          end
+        end
+        object LayTel: TLayout
+          Align = MostTop
+          Position.Y = 80.000000000000000000
+          Size.Width = 367.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object Etel: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 3
+            KeyboardType = NumberPad
+            TextSettings.Font.Family = '(Default)'
+            Size.Width = 302.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = 'Tel'
+            StyledSettings = [Style, FontColor]
+          end
+          object Label2: TLabel
+            Align = MostLeft
+            StyledSettings = [Style, FontColor]
+            Size.Width = 65.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = '(Default)'
+            TextSettings.Font.Size = 11.000000000000000000
+            Text = 'Tel'
+            TabOrder = 1
+          end
+        end
+        object LayDesFour: TLayout
+          Align = MostTop
+          Position.Y = 40.000000000000000000
+          Size.Width = 367.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object EDesFour: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 3
+            TextSettings.Font.Family = '(Default)'
+            Size.Width = 302.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = 'D'#233'signation'
+            StyledSettings = [Style, FontColor]
+          end
+          object Label4: TLabel
+            Align = MostLeft
+            StyledSettings = [Style, FontColor]
+            Size.Width = 65.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = '(Default)'
+            TextSettings.Font.Size = 11.000000000000000000
+            Text = 'D'#233'signation'
+            TabOrder = 1
+          end
+        end
+      end
+    end
+  end
+end

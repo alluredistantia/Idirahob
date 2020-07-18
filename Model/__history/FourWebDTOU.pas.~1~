@@ -1,0 +1,38 @@
+unit FourWebDTOU;
+
+interface
+type TFourWebDTO=class
+  private
+    Ftel: string;
+    Fidfour: Integer;
+    Fdesfour: string;
+    procedure Setdesfour(const Value: string);
+    procedure Setidfour(const Value: Integer);
+    procedure Settel(const Value: string);
+  public
+ property idfour:Integer read Fidfour write Setidfour;
+ property desfour: string read Fdesfour write Setdesfour;
+ property tel:string read Ftel write Settel;
+
+end;
+
+implementation
+
+{ TFourWebDTO }
+
+procedure TFourWebDTO.Setdesfour(const Value: string);
+begin
+  Fdesfour := Value;
+end;
+
+procedure TFourWebDTO.Setidfour(const Value: Integer);
+begin
+  Fidfour := Value;
+end;
+
+procedure TFourWebDTO.Settel(const Value: string);
+begin
+  Ftel := Value;
+end;
+
+end.

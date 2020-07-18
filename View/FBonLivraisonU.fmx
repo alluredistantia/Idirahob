@@ -284,7 +284,6 @@ object FBonLivraison: TFBonLivraison
           Size.PlatformDefault = False
           TabOrder = 2
           Text = 'Ajouter'
-          OnClick = BAjoutDtailClick
         end
         object BSuppDetail: TButton
           Align = Left

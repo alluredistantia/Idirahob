@@ -17,10 +17,22 @@ Type TBonLivWebDTO=class(TObject)
    property desbonliv: string read Fdesbonliv write Setdesbonliv;
    property idfour:Integer read Fidfour write Setidfour;
 
+   constructor create(id:Integer);overload;
+   constructor create();overload;
 end;
 implementation
 
 { TBonLivWebDTO }
+
+constructor TBonLivWebDTO.create(id: Integer);
+begin
+Self.idbonliv :=id;
+end;
+
+constructor TBonLivWebDTO.create;
+begin
+
+end;
 
 procedure TBonLivWebDTO.Setdate_(const Value: string);
 begin

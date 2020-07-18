@@ -1,31 +1,31 @@
 object FArticleWeb: TFArticleWeb
   Align = Center
-  Size.Width = 358.000000000000000000
-  Size.Height = 534.000000000000000000
+  Size.Width = 362.000000000000000000
+  Size.Height = 589.000000000000000000
   Size.PlatformDefault = False
   object Layout1: TLayout
     Align = Client
-    Size.Width = 358.000000000000000000
-    Size.Height = 534.000000000000000000
+    Size.Width = 362.000000000000000000
+    Size.Height = 589.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object VertScrollBox1: TVertScrollBox
       Align = Client
-      Size.Width = 358.000000000000000000
-      Size.Height = 534.000000000000000000
+      Size.Width = 362.000000000000000000
+      Size.Height = 589.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
-      Viewport.Width = 358.000000000000000000
-      Viewport.Height = 534.000000000000000000
+      Viewport.Width = 362.000000000000000000
+      Viewport.Height = 589.000000000000000000
       object RecButtons: TRectangle
         Align = Bottom
-        Position.Y = 417.000000000000000000
-        Size.Width = 358.000000000000000000
+        Position.Y = 472.000000000000000000
+        Size.Width = 362.000000000000000000
         Size.Height = 117.000000000000000000
         Size.PlatformDefault = False
         object BAjouter: TButton
           Align = MostTop
-          Size.Width = 358.000000000000000000
+          Size.Width = 362.000000000000000000
           Size.Height = 41.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
@@ -35,7 +35,7 @@ object FArticleWeb: TFArticleWeb
         object BFermer: TButton
           Align = MostTop
           Position.Y = 41.000000000000000000
-          Size.Width = 358.000000000000000000
+          Size.Width = 362.000000000000000000
           Size.Height = 41.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -45,7 +45,7 @@ object FArticleWeb: TFArticleWeb
         object BSupprimer: TButton
           Align = MostTop
           Position.Y = 82.000000000000000000
-          Size.Width = 358.000000000000000000
+          Size.Width = 362.000000000000000000
           Size.Height = 41.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
@@ -59,14 +59,14 @@ object FArticleWeb: TFArticleWeb
         Padding.Top = 4.000000000000000000
         Padding.Right = 4.000000000000000000
         Padding.Bottom = 4.000000000000000000
-        Size.Width = 358.000000000000000000
+        Size.Width = 362.000000000000000000
         Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
         object EdesArticleRech: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Align = Client
           TabOrder = 0
-          Size.Width = 192.000000000000000000
+          Size.Width = 196.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
           TextPrompt = 'Text recherche article'
@@ -87,7 +87,7 @@ object FArticleWeb: TFArticleWeb
         object BRecherche: TButton
           Align = Right
           StyledSettings = [Family, Style, FontColor]
-          Position.X = 264.000000000000000000
+          Position.X = 268.000000000000000000
           Position.Y = 4.000000000000000000
           Size.Width = 90.000000000000000000
           Size.Height = 32.000000000000000000
@@ -102,15 +102,15 @@ object FArticleWeb: TFArticleWeb
         Align = Client
         CanFocus = True
         ClipChildren = True
-        Size.Width = 358.000000000000000000
-        Size.Height = 136.000000000000000000
+        Size.Width = 362.000000000000000000
+        Size.Height = 167.000000000000000000
         Size.PlatformDefault = False
         StyledSettings = [Family, Style, FontColor]
         TabOrder = 2
         Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
         OnCellClick = StringGrid1CellClick
-        Viewport.Width = 338.000000000000000000
-        Viewport.Height = 95.000000000000000000
+        Viewport.Width = 342.000000000000000000
+        Viewport.Height = 126.000000000000000000
         object StringColumn1: TStringColumn
           Header = 'IdArticle'
           Size.Width = 57.000000000000000000
@@ -156,13 +156,13 @@ object FArticleWeb: TFArticleWeb
         Fill.Gradient.StartPosition.Y = 1.000000000000000000
         Fill.Gradient.StopPosition.X = 0.499999970197677600
         Fill.Gradient.StopPosition.Y = 0.000000000000000000
-        Position.Y = 176.000000000000000000
-        Size.Width = 358.000000000000000000
+        Position.Y = 231.000000000000000000
+        Size.Width = 362.000000000000000000
         Size.Height = 241.000000000000000000
         Size.PlatformDefault = False
         object LayIdArticle: TLayout
           Align = MostTop
-          Size.Width = 358.000000000000000000
+          Size.Width = 362.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
@@ -173,7 +173,7 @@ object FArticleWeb: TFArticleWeb
             KeyboardType = Alphabet
             TextSettings.Font.Family = '(Default)'
             Enabled = False
-            Size.Width = 293.000000000000000000
+            Size.Width = 297.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'idArticle'
@@ -194,7 +194,7 @@ object FArticleWeb: TFArticleWeb
         object LayPrixAchat: TLayout
           Align = MostTop
           Position.Y = 120.000000000000000000
-          Size.Width = 358.000000000000000000
+          Size.Width = 362.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -204,7 +204,7 @@ object FArticleWeb: TFArticleWeb
             TabOrder = 3
             KeyboardType = NumberPad
             TextSettings.Font.Family = '(Default)'
-            Size.Width = 293.000000000000000000
+            Size.Width = 297.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'Prix achat'
@@ -225,7 +225,7 @@ object FArticleWeb: TFArticleWeb
         object LayPrixVente: TLayout
           Align = MostTop
           Position.Y = 80.000000000000000000
-          Size.Width = 358.000000000000000000
+          Size.Width = 362.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
@@ -235,7 +235,7 @@ object FArticleWeb: TFArticleWeb
             TabOrder = 3
             KeyboardType = NumberPad
             TextSettings.Font.Family = '(Default)'
-            Size.Width = 293.000000000000000000
+            Size.Width = 297.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'Prix vente'
@@ -256,7 +256,7 @@ object FArticleWeb: TFArticleWeb
         object LayDesArticle: TLayout
           Align = MostTop
           Position.Y = 40.000000000000000000
-          Size.Width = 358.000000000000000000
+          Size.Width = 362.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 3
@@ -265,7 +265,7 @@ object FArticleWeb: TFArticleWeb
             Align = Client
             TabOrder = 3
             TextSettings.Font.Family = '(Default)'
-            Size.Width = 293.000000000000000000
+            Size.Width = 297.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'D'#233'signation'
@@ -286,7 +286,7 @@ object FArticleWeb: TFArticleWeb
         object LayLastQteAchat: TLayout
           Align = MostTop
           Position.Y = 160.000000000000000000
-          Size.Width = 358.000000000000000000
+          Size.Width = 362.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 4
@@ -296,7 +296,7 @@ object FArticleWeb: TFArticleWeb
             TabOrder = 3
             KeyboardType = NumberPad
             TextSettings.Font.Family = '(Default)'
-            Size.Width = 293.000000000000000000
+            Size.Width = 297.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'Qt'#233' achat'
@@ -317,7 +317,7 @@ object FArticleWeb: TFArticleWeb
         object LayQteStock: TLayout
           Align = MostTop
           Position.Y = 200.000000000000000000
-          Size.Width = 358.000000000000000000
+          Size.Width = 362.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 5
@@ -327,7 +327,7 @@ object FArticleWeb: TFArticleWeb
             TabOrder = 3
             TextSettings.Font.Family = '(Default)'
             Enabled = False
-            Size.Width = 293.000000000000000000
+            Size.Width = 297.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'Qt'#233' Stock'
@@ -377,6 +377,13 @@ object FArticleWeb: TFArticleWeb
             TabOrder = 1
           end
         end
+      end
+      object MenuBar1: TMenuBar
+        Position.Y = 40.000000000000000000
+        Size.Width = 362.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
       end
     end
   end

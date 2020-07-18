@@ -1,13 +1,16 @@
 unit RBonLivWabDAOU;
 
 interface
-uses RBonLivWebDTOU, System.Generics.Collections;
+uses RBonLivWebDTOU, System.Generics.Collections, FourWebDTOU;
 type RBonLivListDTO=TObjectList<TRBonLivWebDTO>;
 type TRBonLivWebDAO=class (TObject)
+
+public
 function getNewId:integer;
 function save(vRBonLivWebDTO:TRBonLivWebDTO): integer;
 function getRBonLivsByBonLiv(vBonLiv:integer): RBonLivListDTO;
 function getNbrRBonLivsByBonLiv(vBonLiv:integer): integer;
+
 function getNbr: integer;
 end;
 
@@ -17,6 +20,7 @@ uses
   APIUtilsU, REST.Json, System.SysUtils;
 
 { TRInventDAO }
+
 
 function TRBonLivWebDAO.getNbrRBonLivsByBonLiv(vBonLiv:integer): integer;
 begin
@@ -42,6 +46,8 @@ begin
   result:=ListRBonLiv;
 end;
 
+
+
 function TRBonLivWebDAO.getNbr: integer;
 begin
 Result:=strtoint(RestReqGet.create(nil,'rBonLiv/getNbr').Response.JSONValue.ToString);
@@ -49,7 +55,7 @@ Result:=strtoint(RestReqGet.create(nil,'rBonLiv/getNbr').Response.JSONValue.ToSt
 end;
 
 
-function RBonLivWebDAO.save(vRBonLivWebDTO:TRBonLivWebDTO): integer;
+function TRBonLivWebDAO.save(vRBonLivWebDTO:TRBonLivWebDTO): integer;
 begin
 RestReqPost.create(TJson.ObjectToJsonObject(vRBonLivWebDTO),
 'rBonLiv/setRBonLiv');

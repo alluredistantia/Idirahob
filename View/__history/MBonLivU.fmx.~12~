@@ -1,0 +1,130 @@
+object MBonLiv: TMBonLiv
+  Size.Width = 332.000000000000000000
+  Size.Height = 474.000000000000000000
+  Size.PlatformDefault = False
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 332.000000000000000000
+    Size.Height = 474.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object EidBonLiv: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 1
+      Size.Width = 332.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Code'
+      object Label1: TLabel
+        Align = MostRight
+        Position.X = 212.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Code'
+        TabOrder = 0
+      end
+    end
+    object EdesBonLiv: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 0
+      Position.Y = 33.000000000000000000
+      Size.Width = 332.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'D'#233'signation'
+      object Label2: TLabel
+        Align = MostRight
+        Position.X = 212.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'D'#233'signation'
+        TabOrder = 0
+      end
+    end
+    object Rectangle1: TRectangle
+      Align = Top
+      Position.Y = 129.000000000000000000
+      Size.Width = 332.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      object BAjout: TButton
+        Align = MostLeft
+        Size.Width = 161.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Ajouter'
+        OnClick = BAjoutClick
+      end
+      object Bferme: TButton
+        Align = MostLeft
+        Position.X = 161.000000000000000000
+        Size.Width = 168.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Fermer'
+        OnClick = BfermeClick
+      end
+    end
+    object Button3: TButton
+      Align = Top
+      Position.Y = 161.000000000000000000
+      Size.Width = 332.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'priortoolbutton'
+      TabOrder = 2
+      Text = 'Button3'
+    end
+    object Layout2: TLayout
+      Align = Top
+      Position.Y = 65.000000000000000000
+      Size.Width = 332.000000000000000000
+      Size.Height = 64.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object Rectangle2: TRectangle
+        Align = Top
+        Size.Width = 332.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        object Eidfour: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = MostLeft
+          TabOrder = 0
+          Enabled = False
+          Size.Width = 169.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Id fournisseur'
+        end
+        object Bselect: TButton
+          Align = MostLeft
+          Position.X = 169.000000000000000000
+          Size.Width = 161.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Recherche'
+          OnClick = BselectClick
+        end
+      end
+      object Edesfour: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        Position.Y = 33.000000000000000000
+        Enabled = False
+        Size.Width = 332.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Des fournisseur'
+      end
+    end
+  end
+end

@@ -1,0 +1,74 @@
+unit MBonLivU;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Objects, FMX.Controls.Presentation, FMX.Edit, FMX.Layouts,FFourWebU;
+
+type
+  TMBonLiv = class(TFrame)
+    Layout1: TLayout;
+    EidBonLiv: TEdit;
+    Label1: TLabel;
+    EdesBonLiv: TEdit;
+    Label2: TLabel;
+    Rectangle1: TRectangle;
+    Button3: TButton;
+    BAjout: TButton;
+    Bferme: TButton;
+    Rectangle2: TRectangle;
+    Eidfour: TEdit;
+    Bselect: TButton;
+
+    procedure BAjoutClick(Sender: TObject);
+    procedure BselectClick(Sender: TObject);
+    procedure BfermeClick(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+    oFfourWeb:TFFourWeb;
+  end;
+
+implementation
+
+uses
+  MainU, PreAchatLocDTOU, PreAchatLocDAOU, BonLivWebDTOU, BonlivWebDAOU
+  ;
+
+{$R *.fmx}
+
+
+
+procedure TMBonLiv.BAjoutClick(Sender: TObject);
+var obonlivDTO:TBonLivWebDTO;
+begin
+obonlivDTO:=TBonLivWebDTO.create;
+obonlivDTO.idbonliv:=StrToInt(EidBonLiv.Text);
+obonlivDTO.desbonliv:=EdesBonLiv.Text;
+TBonLivWebDAO.create.save(obonlivDTO);
+main.TabControl1.ActiveTab:=Main.TAchat;
+obonlivDTO.DisposeOf;
+Main.oTFBonLiv.AfficherEntete;
+Self.DisposeOf;
+
+end;
+
+procedure TMBonLiv.BfermeClick(Sender: TObject);
+begin
+main.TabControl1.ActiveTab:=Main.TAchat;
+Self.DisposeOf;
+end;
+
+procedure TMBonLiv.BselectClick(Sender: TObject);
+begin
+oFfourWeb:=TFFourWeb.Create(nil);
+oFfourWeb.Parent:=Main.LayoutMAJAchat;
+Main.TabControl1.ActiveTab:=Main.TMAJAchat;
+oFfourWeb.BAjouter.Visible:=False;
+oFfourWeb.BSupprimer.Visible:=False;
+end;
+
+end.

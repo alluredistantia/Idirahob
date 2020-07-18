@@ -1,0 +1,180 @@
+unit FFourWebU;
+
+interface
+
+uses
+  ArticleWebDTOU, System.SysUtils, System.Types, System.UITypes, System.Variants,
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  System.Rtti, FMX.Grid.Style, IPPeerClient, REST.Client, Data.Bind.Components,
+  Data.Bind.ObjectScope, FMX.Grid, FMX.ScrollBox, FMX.Edit, FMX.Controls.Presentation,
+  FMX.Objects, FMX.Layouts, System.Classes,FourWebDTOU,
+  System.Generics.Collections;
+
+type
+  TFFourWeb = class(TFrame)
+    Layout1: TLayout;
+    Rectangle2: TRectangle;
+    StringGrid1: TStringGrid;
+    StringColumn1: TStringColumn;
+    StringColumn2: TStringColumn;
+    StringColumn3: TStringColumn;
+    EdesRech: TEdit;
+    BRecherche: TButton;
+    EidRech: TEdit;
+    RRecherche: TRectangle;
+    LayIdFour: TLayout;
+    EidFour: TEdit;
+    Label1: TLabel;
+    LayTel: TLayout;
+    Etel: TEdit;
+    Label2: TLabel;
+    LayDesFour: TLayout;
+    EDesFour: TEdit;
+    Label4: TLabel;
+    RecButtons: TRectangle;
+    BAjouter: TButton;
+    BSupprimer: TButton;
+    BFermer: TButton;
+    VertScrollBox1: TVertScrollBox;
+    Bselect: TButton;
+
+//    Procedure AfficherArt;
+//    Procedure AfficherArts;
+    procedure BCloseClick(Sender: TObject);
+    procedure BSupprimerClick(Sender: TObject);
+    procedure BAjouterClick(Sender: TObject);
+    procedure BRechercheClick(Sender: TObject);
+    procedure BFermerClick(Sender: TObject);
+    procedure StringGrid1CellClick(const Column: TColumn; const Row: Integer);
+    procedure BselectClick(Sender: TObject);
+  private
+
+  public
+  selectedRowRecep,selectedRowArt:integer;
+
+
+  end;
+
+  TListFourDTO=TObjectList<TFourWebDTO>;
+
+implementation
+
+uses
+  REST.Json,  REST.Types, StringUtilsU, System.JSON,
+   MainU, APIUtilsU, FourWebDAOU;
+
+{$R *.fmx}
+
+procedure TFFourWeb.BAjouterClick(Sender: TObject);
+var oarticleDTO:TArticleWebDTO;
+begin
+if EidFour.Text='' then
+EidFour.Text:=TFourWebDAO.Create.getMaxIdFour;
+oarticleDTO:=TArticleWebDTO.Create(EIdArticle.Text);
+oarticleDTO.desArticle:=EDesArticle.Text;
+
+oarticleDTO.uart:=EUArt.Text;
+TArticleWebDAO.create(oarticleDTO).save;
+oarticleDTO.DisposeOf;
+Main.oTMBarCodeWeb.EidArticle.Text:=Self.EidArticle.Text;
+Main.oTMBarCodeWeb.EDesArticle.Text:=Self.EDesArticle.Text;
+BFermerClick(self);
+end;
+
+procedure TFFourWeb.BCloseClick(Sender: TObject);
+begin
+  Main.TabControl1.ActiveTab:=Main.TMain;
+end;
+
+procedure TFFourWeb.BFermerClick(Sender: TObject);
+begin
+Self.DisposeOf;
+Main.TabControl1.ActiveTab:=Main.TAchat;
+end;
+
+
+procedure TFFourWeb.BSupprimerClick(Sender: TObject);
+begin
+if MessageDlg('Voulais vous vraiment supprimer?',TMsgDlgType.mtConfirmation,
+[TmsgDlgBtn.mbOK,TmsgDlgBtn.mbCancel],0)=mrok then
+begin
+  TFourWebDAO.create(TFourWebDTO.create(StrToInt(StringGrid1.Cells[0,StringGrid1.Row]))).delete;
+  BRechercheClick(self);
+end;
+
+end;
+
+procedure TFFourWeb.StringGrid1CellClick(const Column: TColumn;
+  const Row: Integer);
+var
+oFourDTO:TFourWebDTO;
+begin
+if StringGrid1.Cells[0,Row]<>'' then
+begin
+  oFourDTO:=TJSON.JsonToObject<TFourWebDTO>(RestReqGet.
+  create(nil,'Four/getFourById/'+StringGrid1.Cells[0,Row]).Response.
+  JSONValue.ToString);
+  EidFour.Text:=IntToStr(oFourDTO.idfour);
+  EDesFour.Text:=oFourDTO.desfour;
+  Etel.Text:=oFourDTO.tel;
+  oFourDTO.DisposeOf;
+end;
+end;
+
+procedure TFFourWeb.BRechercheClick(Sender: TObject);
+
+var
+  FourList:TListFourWebDTO;
+  OFour:TFourWebDTO;
+  i:Integer;
+  vNbrLike:integer;
+begin
+if EdesRech.Text<>'' then
+begin
+  vNbrLike:=TFourWebDAO.create.getNbrLike(EdesRech.Text);
+  StringGrid1.RowCount:=vNbrLike;
+  for i := 0 to StringGrid1.RowCount-1 do
+  begin
+    StringGrid1.Cells[0,i]:='';
+    StringGrid1.Cells[1,i]:='';
+    StringGrid1.Cells[2,i]:='';
+
+  end;
+  FourList:=TFourWebDAO.create.getListByText(EdesRech.Text);
+
+  i:=0;
+  for OFour in FourList do
+  begin
+    StringGrid1.Cells[0,i]:=IntToStr(OFour.idfour);
+    StringGrid1.Cells[1,i]:=OFour.desfour;
+    StringGrid1.Cells[2,i]:=OFour.tel;
+
+    inc(i);
+  end;
+end;
+
+end;
+
+procedure TFFourWeb.BselectClick(Sender: TObject);
+var
+oFourWebDTO:TFourWebDTO;
+
+begin
+if StringGrid1.Cells[0,selectedRowArt]<>'' then
+begin
+  oFourWebDTO:=TFourWebDTO.create(StrToInt(StringGrid1.Cells[0,StringGrid1.Row]));
+  //oFourWebDTO.idfour:=StringGrid1.Cells[0,StringGrid1.Row];
+ // Main.oTFBonLiv.oMBonLiv.Eidfour.Text:=inttostr(oFourWebDTO.idfour);
+  oFourWebDTO:=TJSON.JsonToObject<TFourWebDTO>(RestReqGet.
+  create(nil,'Four/getFourById/'+StringGrid1.Cells[0,StringGrid1.Row]).Response.JSONValue.ToString);
+
+  Main.oTFBonLiv.oMBonLiv.Edesfour.Text:=oFourWebDTO.desfour;
+  Main.oTFBonLiv.oMBonLiv.Eidfour.Text:=IntToStr(oFourWebDTO.idfour);
+  ShowMessage(oFourWebDTO.desfour);
+  oFourWebDTO.DisposeOf;
+  main.TabControl1.ActiveTab:=Main.TMAJAchat;
+  Self.DisposeOf;
+ end;
+end;
+
+end.

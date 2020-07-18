@@ -454,8 +454,8 @@ object FArticleLoc: TFArticleLoc
         TabOrder = 0
         Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
         OnCellClick = StringGrid1CellClick
-        Viewport.Width = 381.000000000000000000
-        Viewport.Height = 117.000000000000000000
+        Viewport.Width = 401.000000000000000000
+        Viewport.Height = 158.000000000000000000
         object StringColumn1: TStringColumn
           Header = 'IdArticle'
           Size.Width = 37.000000000000000000
