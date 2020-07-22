@@ -181,7 +181,7 @@ object FFourWeb: TFFourWeb
             Size.PlatformDefault = False
             TextSettings.Font.Family = '(Default)'
             TextSettings.Font.Size = 11.000000000000000000
-            Text = 'idArticle'
+            Text = 'idFour'
             TabOrder = 1
           end
         end

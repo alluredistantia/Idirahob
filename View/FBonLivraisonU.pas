@@ -47,6 +47,7 @@ type
     PrixCartonColumn: TStringColumn;
     Rectangle5: TRectangle;
     ColFour: TStringColumn;
+    colIdFour: TStringColumn;
     procedure SGEnteteCellClick(const Column: TColumn; const Row: Integer);
     procedure BretourClick(Sender: TObject);
     procedure BSuppClick(Sender: TObject);
@@ -67,7 +68,7 @@ type
   oSelectedbonlivDTO:TBonLivWebDTO;
   oSelectedRbonlivDTO:TRBonLivWebDTO;
   procedure AfficherEntete;
-//  procedure AfficherDetail(sg:TStringGrid;vbonlivWebDTO:TBonLivWebDTO;etot:Tedit);
+  procedure AfficherDetail(sg:TStringGrid;vbonlivWebDTO:TBonLivWebDTO;etot:Tedit);
     { Déclarations publiques }
   end;
 
@@ -84,13 +85,12 @@ uses
 
 {$R *.fmx}
 
-{ TFInvent }
 
-{procedure TFBonLivraison.AfficherDetail(sg:TStringGrid;vbonlivWebDTO:TBonLivWebDTO;etot:Tedit);
+
+procedure TFBonLivraison.AfficherDetail(sg:TStringGrid;vbonlivWebDTO:TBonLivWebDTO;etot:Tedit);
  var
- RBonLivList:TListBonLivWebDTO;
+  RBonLivList:TListRBonLivWebDTO;
   ORBonLivWebDTO:TRBonLivWebDTO;
- // oBarCodeLocDAO: TBarCodeLocDAO;
   i:Integer;
   vNbr:integer;
 begin
@@ -102,29 +102,28 @@ begin
    sg.Cells[1,i]:='';
    sg.Cells[2,i]:='';
    sg.Cells[3,i]:='';
-   {sadaoui :}
-  { sg.Cells[4,i]:='';
+   sg.Cells[4,i]:='';
    sg.Cells[5,i]:='';
 
   end;
- RpreachatList:=TRPreAchatLocDAO.create.getRPreAchatsByPreAchat(Self.oSelectedpreAchatDTO.idpreachatloc);
+ RBonLivList:=TRBonLivWebDAO.create.getRBonLivsByBonLiv(Self.oSelectedbonlivDTO.idbonliv);
 
   i:=0;
-  for ORPreachatlocDTO in RpreachatList do
+  for ORBonLivWebDTO in RBonLivList do
   begin
-    sg.Cells[0,i]:=IntToStr(ORPreachatlocDTO.idrpreachatloc);
-    sg.Cells[1,i]:=ORPreachatlocDTO.idbarcodeloc;
+    sg.Cells[0,i]:=IntToStr(ORBonLivWebDTO.idrbonliv);
+    sg.Cells[1,i]:=ORBonLivWebDTO.idbarcode;
     sg.Cells[2,i]:=TBarCodeLocDAO.create.
-    getArticleLocDTO(TBarCodeLocDTO.create(ORPreachatlocDTO.idbarcodeloc)).desarticleloc;
-    sg.Cells[3,i]:=FloatToStr(ORPreachatlocDTO.qtepreachatloc);
-    sg.Cells[4,i]:=FloatToStr(ORPreachatlocDTO.prixpreachatloc);
-    {sadaoui: }
-    {sg.Cells[5,i]:=TArticleLocDAO.create.Prixcarton(TBarCodeLocDAO.create.getArticleLocDTO(TBarCodeLocDTO.create(ORPreachatlocDTO.idbarcodeloc))).ToString;
-     {fin}
-   { inc(i);
+    getArticleLocDTO(TBarCodeLocDTO.create(ORBonLivWebDTO.idbarcode)).desarticleloc;
+    sg.Cells[3,i]:=FloatToStr(ORBonLivWebDTO.qtebonliv);
+    sg.Cells[4,i]:=FloatToStr(ORBonLivWebDTO.prixbonliv);
+
+    sg.Cells[5,i]:=TArticleLocDAO.create.Prixcarton(TBarCodeLocDAO.create.getArticleLocDTO(TBarCodeLocDTO.create(ORBonLivWebDTO.idbarcode))).ToString;
+
+    inc(i);
   end;
-  etot.Text:=FormatFloat('#,##0',TRPreAchatLocDAO.Create.totalMontants(vPreAchatLocDTO)); }
-//end;
+  //etot.Text:=FormatFloat('#,##0',TRPreAchatLocDAO.Create.totalMontants(vPreAchatLocDTO)); }
+end;
 
 procedure TFBonLivraison.AfficherEntete;
 var
@@ -143,6 +142,7 @@ begin
     SGEntete.Cells[1,i]:='';
     SGEntete.Cells[2,i]:='';
     SGEntete.Cells[3,i]:='';
+    SGEntete.Cells[4,i]:='';
   end;
   BonLivList:=TBonLivWebDAO.create.getBonLivs;
    //ShowMessage(BonLivList.First.idbonliv.ToString);
@@ -154,6 +154,7 @@ begin
     SGEntete.Cells[1,i]:=OBonLivWebDTO.desbonliv;
     SGEntete.Cells[2,i]:=OBonLivWebDTO.date_;
     SGEntete.Cells[3,i]:=TBonlivWebDAO.Create(OBonLivWebDTO).getFourwebDTO.desfour;//OBonLivWebDTO.idfour.ToString;   //
+    SGEntete.Cells[4,i]:=IntToStr(OBonLivWebDTO.idfour);
     inc(i);
   end;
   SGEntete.Row:=0;
@@ -197,7 +198,7 @@ oMBonLiv.EidBonLiv.Text:=IntToStr(oSelectedbonlivDTO.idbonliv);
 oMBonLiv.EidBonLiv.Enabled:=false;
 oMBonLiv.EdesBonLiv.Text:=oSelectedbonlivDTO.desbonliv;
 oMBonLiv.Eidfour.Text:= IntToStr(oSelectedbonlivDTO.idfour);
-//oMBonLiv.Edesfour.text:=TFourWebDAO.create.getFourById(oSelectedbonlivDTO.idbonliv).desfour;
+oMBonLiv.Edesfour.text:=TBonlivWebDAO.Create(oSelectedbonlivDTO).getFourwebDTO.desfour//TFourWebDAO.create.getFourById(oSelectedbonlivDTO.idbonliv).desfour;
 
 end;
 
@@ -265,7 +266,8 @@ if Assigned(oSelectedbonlivDTO)=true then oSelectedbonlivDTO.DisposeOf;
 oSelectedbonlivDTO:=TBonLivWebDTO.Create;
 oSelectedbonlivDTO.idbonliv:=strtoInt(SGEntete.Cells[0,Row]);
 oSelectedbonlivDTO.desbonliv:=SGEntete.Cells[1,Row];
-//Self.AfficherDetail(SGDetail,oSelectedpreAchatDTO,ETotal);
+oSelectedbonlivDTO.idfour:= strtoInt(SGEntete.Cells[4,Row]);
+Self.AfficherDetail(SGDetail,oSelectedbonlivDTO,ETotal);
 //if TPreAchatLocDAO.Create.hasDetail(oSelectedpreAchatDTO) then
 //Self.SGDetailCellClick(Self.StringColumn3,0);
 end;

@@ -51,7 +51,7 @@ type
 
   public
   selectedRowRecep,selectedRowArt:integer;
-
+   procedure affichertout;
 
   end;
 
@@ -64,6 +64,38 @@ uses
    MainU, APIUtilsU, FourWebDAOU;
 
 {$R *.fmx}
+
+procedure TFFourWeb.affichertout;
+var
+  FourList:TListFourWebDTO;
+  OFour:TFourWebDTO;
+  i:Integer;
+  vNbrLike:integer;
+begin
+
+  vNbrLike:=TFourWebDAO.create.getNbrFour;
+  StringGrid1.RowCount:=vNbrLike;
+  for i := 0 to StringGrid1.RowCount-1 do
+  begin
+    StringGrid1.Cells[0,i]:='';
+    StringGrid1.Cells[1,i]:='';
+    StringGrid1.Cells[2,i]:='';
+
+  end;
+  FourList:=TFourWebDAO.create.getFours;
+
+  i:=0;
+  for OFour in FourList do
+  begin
+    StringGrid1.Cells[0,i]:=IntToStr(OFour.idfour);
+    StringGrid1.Cells[1,i]:=OFour.desfour;
+    StringGrid1.Cells[2,i]:=OFour.tel;
+
+    inc(i);
+  end;
+
+
+end;
 
 procedure TFFourWeb.BAjouterClick(Sender: TObject);
 var ofourDTO:TFourWebDTO;
@@ -149,7 +181,11 @@ begin
 
     inc(i);
   end;
-end;
+
+  end else
+  begin
+  self.affichertout;
+  end;
 
 end;
 

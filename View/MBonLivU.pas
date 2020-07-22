@@ -23,6 +23,7 @@ type
     Bselect: TButton;
     Edesfour: TEdit;
     Layout2: TLayout;
+    Label3: TLabel;
 
     procedure BAjoutClick(Sender: TObject);
     procedure BselectClick(Sender: TObject);
@@ -73,6 +74,7 @@ oFfourWeb.Parent:=Main.LayoutMAJAchat;
 Main.TabControl1.ActiveTab:=Main.TMAJAchat;
 oFfourWeb.BAjouter.Visible:=False;
 oFfourWeb.BSupprimer.Visible:=False;
+oFfourWeb.affichertout;
 end;
 
 

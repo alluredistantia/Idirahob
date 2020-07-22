@@ -43,6 +43,7 @@ function TBonlivWebDAO.delete: integer;
 begin
 RestReqPost.create(TJson.ObjectToJsonObject(FBonLivWebDTO),
 'BonLiv/delBonLiv');
+
 end;
 
 

@@ -73,8 +73,8 @@ object FBonLivraison: TFBonLivraison
           TabOrder = 0
           Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
           OnCellClick = SGEnteteCellClick
-          Viewport.Width = 334.000000000000000000
-          Viewport.Height = 111.000000000000000000
+          Viewport.Width = 354.000000000000000000
+          Viewport.Height = 152.000000000000000000
           object StringColumn1: TStringColumn
             Header = 'Code Pr'#233'Achat'
             Size.Width = 49.000000000000000000
@@ -90,6 +90,10 @@ object FBonLivraison: TFBonLivraison
           object ColFour: TStringColumn
             Header = 'Fournisseur'
             Size.Width = 111.000000000000000000
+          end
+          object colIdFour: TStringColumn
+            Header = 'IdFOUR'
+            Visible = False
           end
         end
       end
@@ -110,20 +114,20 @@ object FBonLivraison: TFBonLivraison
           TabOrder = 0
           Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
           OnCellClick = SGDetailCellClick
-          Viewport.Width = 338.000000000000000000
-          Viewport.Height = 197.000000000000000000
+          Viewport.Width = 358.000000000000000000
+          Viewport.Height = 222.000000000000000000
           object StringColumn3: TStringColumn
-            Header = 'idRPr'#233'Achat'
+            Header = 'idRBonLiv'
             Visible = False
-            Size.Width = 1.000000000000000000
+            Size.Width = 33.000000000000000000
           end
           object StringColumn4: TStringColumn
             Header = 'CodeBarre'
-            Size.Width = 23.000000000000000000
+            Size.Width = 87.000000000000000000
           end
           object DesColumn: TStringColumn
             Header = 'D'#233'signation'
-            Size.Width = 159.000000000000000000
+            Size.Width = 111.000000000000000000
           end
           object StringColumn5: TStringColumn
             Header = 'Qt'#233
@@ -135,7 +139,7 @@ object FBonLivraison: TFBonLivraison
           end
           object PrixCartonColumn: TStringColumn
             Header = 'Prix Carton'
-            Size.Width = 63.000000000000000000
+            Size.Width = 81.000000000000000000
           end
         end
       end

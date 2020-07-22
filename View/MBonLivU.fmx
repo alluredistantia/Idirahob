@@ -57,7 +57,7 @@ object MBonLiv: TMBonLiv
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
-        Text = 'Ajouter'
+        Text = 'Valider'
         OnClick = BAjoutClick
       end
       object Bferme: TButton
@@ -126,12 +126,26 @@ object MBonLiv: TMBonLiv
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Align = Top
         TabOrder = 1
-        Position.Y = 33.000000000000000000
+        Position.X = 3.000000000000000000
+        Position.Y = 36.000000000000000000
         Enabled = False
-        Size.Width = 322.000000000000000000
+        Margins.Left = 3.000000000000000000
+        Margins.Top = 3.000000000000000000
+        Margins.Right = 3.000000000000000000
+        Margins.Bottom = 3.000000000000000000
+        Size.Width = 316.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
         TextPrompt = 'Des fournisseur'
+        object Label3: TLabel
+          Align = MostRight
+          Position.X = 196.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Des fournisseur'
+          TabOrder = 0
+        end
       end
     end
   end
