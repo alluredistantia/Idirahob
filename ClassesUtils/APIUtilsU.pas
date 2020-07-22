@@ -22,7 +22,7 @@ uses MainU, FMX.Dialogs;
 constructor RestReqGet.create(owner: TComponent; res: string);
 begin
 inherited create(owner);
-main.restClient1.BaseURL:='http://'+Main.EIP.text+':8080/rest';///APISup1
+main.restClient1.BaseURL:='http://'+Main.EIP.text+':8080/APISup1/rest';//
 Self.Client:=Main.RESTClient1;
 Self.Response:=TRESTResponse.Create(self);
 Self.Method:=TRESTRequestMethod.rmGET;
@@ -33,7 +33,7 @@ end;
 
 constructor RestReqPost.create(body:TJSonObject; res: string);
 begin
-main.restClient1.BaseURL:='http://'+Main.EIP.text+':8080/rest';//APISup1/
+main.restClient1.BaseURL:='http://'+Main.EIP.text+':8080/APISup1/rest';//
 inherited create(nil);
 Self.Client:=Main.RESTClient1;
 Self.Method:=TRESTRequestMethod.rmPOST;

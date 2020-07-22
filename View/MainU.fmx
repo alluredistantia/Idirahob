@@ -50,7 +50,7 @@ object Main: TMain
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Align = Top
           TabOrder = 0
-          Text = '127.0.0.1'
+          Text = '192.168.0.103'
           Size.Width = 356.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
