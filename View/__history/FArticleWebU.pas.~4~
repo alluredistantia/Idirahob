@@ -79,7 +79,7 @@ implementation
 
 uses
   REST.Json,  REST.Types, StringUtilsU, System.JSON,
-   MainU, APIUtilsU, ArticleWebDAOU, BarCodeWebDAOU;
+   MainU, APIUtilsU, ArticleWebDAOU;
 
 {$R *.fmx}
 
@@ -209,16 +209,17 @@ begin
 if StringGrid1.Cells[0,selectedRowArt]<>'' then
 begin
   oArticleWebDTO:=TArticleWebDTO.create;
-  oArticleWebDTO.idarticle:=StringGrid1.Cells[0,StringGrid1.Row];
-  TArticleWebDAO.create.loadData(oArticleWebDTO.idarticle);
-  Main.oTFBonLiv.oMRBonLiv.EdesArticle.text:=TArticleWebDAO.create.loadData(oArticleWebDTO.idarticle).desarticle;
-  Main.oTFBonLiv.oMRBonLiv.ELastPrixAchat.text:=FloatToStr(TArticleWebDAO.create.loadData(oArticleWebDTO.idarticle).lastprixachat);
-  Main.oTFBonLiv.oMRBonLiv.ElastQteAchat.text:=FloatToStr(TArticleWebDAO.create.loadData(oArticleWebDTO.idarticle).lastqteachat);
-  //Main.oTFBonLiv.oMRBonLiv.EidBarCode.text:=TBarCodeWebDAO.create.get;
-  oArticleWebDTO.DisposeOf;
+  oArticleWebDTO.idarticle:=StEringGrid1.Cells[0,StringGrid1.Row];
+  TArticleWebDAO.create.loadData(oArticleLocDTO.id);
+  Main.oTFPreAchat.oMRPreAchat.EdesArticle.text:=oArticleLocDTO.desarticleloc;
+  Main.oTFPreAchat.oMRPreAchat.ELastPrixAchat.text:=FloatToStr(oArticleLocDTO.lastprixachat);
+  Main.oTFPreAchat.oMRPreAchat.ElastQteAchat.text:=FloatToStr(oArticleLocDTO.lastqteachat);
+  Main.oTFPreAchat.oMRPreAchat.EidBarCode.text:=TArticleLocDAO.create.getFirstBarCodeLocDTO(oArticleLocDTO).idbarcodeloc;
+//   ShowMessage(TArticleLocDAO.create.getFirstBarCodeLocDTO(oArticleLocDTO).idbarcodeloc);
+  oArticleLocDTO.DisposeOf;
   main.TabControl1.ActiveTab:=Main.TMAJAchat;
   Self.DisposeOf;
- end;
+
 end;
 
 end.

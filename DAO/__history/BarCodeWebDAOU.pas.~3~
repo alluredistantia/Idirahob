@@ -23,7 +23,7 @@ function saveWeb:integer;
 function deleteWeb:integer;
 function getBarCodes: TListBarCodeWeb;
 function getNbrBarCodeWeb:integer;
-function getArticleWebDTO:TArticleWebDTO;
+function getArticleWebDTO(obarcodewebdto:TBarCodeWebDTO):TArticleWebDTO;
 function isExistWeb:Boolean;
 
 //function getListBarCodeLoc:TlistBarCodeLoc;
@@ -58,11 +58,15 @@ RestReqPost.create(TJson.ObjectToJsonObject(FBarCodeDTO),
 'BarCode/delBarCode');
 end;
 
-function TBarCodeWebDAO.getArticleWebDTO: TArticleWebDTO;
+function TBarCodeWebDAO.getArticleWebDTO(obarcodewebdto:TBarCodeWebDTO): TArticleWebDTO;
+begin
+Result:=TJSON.JsonToObject<TArticleWebDTO>(RestReqGet.create(nil,'BarCode/getArticle/'+obarcodewebdto.idbarcode).Response.JSONValue.ToString);
+end;
+{function TBarCodeWebDAO.getArticleWebDTO: TArticleWebDTO;
 begin
 
 Result:=TJSON.JsonToObject<TArticleWebDTO>(RestReqGet.create(nil,'BarCode/getArticle/'+Self.FBarCodeDTO.idbarcode).Response.JSONValue.ToString);
-end;
+end;  }
 
 function TBarCodeWebDAO.getNbrBarCodeWeb: integer;
 begin

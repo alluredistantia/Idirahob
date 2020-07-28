@@ -77,7 +77,6 @@ oFArticle.EidArticleRech.Text:=Self.EidArticle.Text;
 oFArticle.EdesArticleRech.text:=EDesArticle.Text;
 oFArticle.BRechercheClick(self);
 oFArticle.StringGrid1CellClick(oFArticle.StringColumn1,0);
-oFArticle.Bselect.Visible:=False;
 end;
 
 

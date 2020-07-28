@@ -65,7 +65,7 @@ end;
 
 function TRBonLivWebDAO.getBarcodewebDTO: TBarCodeWebDTO;
 begin
-Result:=TJSON.JsonToObject<TBarCodeWebDTO>(RestReqGet.create(nil,'rBonLiv/getBarCode/'+Self.FRBonLivWebDTO.idrbonliv.ToString).Response.JSONValue.ToString);
+Result:=TJSON.JsonToObject<TFourWebDTO>(RestReqGet.create(nil,'rBonLiv/getBarCode/'+Self.FBonLivWebDTO.idbonliv.ToString).Response.JSONValue.ToString);
 
 end;
 

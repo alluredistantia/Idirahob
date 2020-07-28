@@ -90,7 +90,6 @@ Main.TabControl1.ActiveTab:=Main.TMAJAchat;
 oFArticleLoc.BAjouter.Visible:=False;
 oFArticleLoc.BSupprimer.Visible:=False;
 
-
 //oFArticleLoc.BRechercheClick(self);
 //oFArticleLoc.StringGrid1CellClick(oFArticleLoc.StringColumn1,0);
 end;

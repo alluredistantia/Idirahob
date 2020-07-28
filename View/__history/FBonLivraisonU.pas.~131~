@@ -119,7 +119,7 @@ begin
     obarCodeWebDTO:=TbarCodeWebDTO.create(ORBonLivWebDTO.idbarcode);
     sg.Cells[0,i]:=IntToStr(ORBonLivWebDTO.idrbonliv);
     sg.Cells[1,i]:=ORBonLivWebDTO.idbarcode;
-    sg.Cells[2,i]:=TBarCodeWebDAO.create(obarCodeWebDTO).getArticleWebDTO.desarticle;
+    sg.Cells[2,i]:=TBarCodeWebDAO.create().getArticleWebDTO.desarticle;
     sg.Cells[3,i]:=FloatToStr(ORBonLivWebDTO.qtebonliv);
     sg.Cells[4,i]:=FloatToStr(ORBonLivWebDTO.prixbonliv);
      //oBarCodeWebDAO:=TBarCodeWebDAO.create(oBarCodeDTO).getArticleWebDTO;

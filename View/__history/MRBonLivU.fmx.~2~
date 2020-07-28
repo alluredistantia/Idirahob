@@ -1,0 +1,173 @@
+object MRBonLiv: TMRBonLiv
+  Size.Width = 339.000000000000000000
+  Size.Height = 587.000000000000000000
+  Size.PlatformDefault = False
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 339.000000000000000000
+    Size.Height = 587.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object BScan: TButton
+      Align = Top
+      Size.Width = 339.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      Text = 'Scanner'
+    end
+    object EidBarCode: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 6
+      Position.Y = 33.000000000000000000
+      Size.Width = 339.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Code'
+    end
+    object BDisplayArticle: TButton
+      Align = Top
+      Position.Y = 55.000000000000000000
+      Size.Width = 339.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      Text = 'Afficher Article'
+    end
+    object BrechArticle: TButton
+      Align = Top
+      Position.Y = 89.000000000000000000
+      Size.Width = 339.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 11
+      Text = 'Selectionner Article'
+    end
+    object EdesArticle: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 5
+      ReadOnly = True
+      TextSettings.HorzAlign = Trailing
+      Position.Y = 121.000000000000000000
+      Size.Width = 339.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'D'#233'signation'
+      object Label1: TLabel
+        Align = Left
+        Size.Width = 120.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'D'#233'signation:'
+        TabOrder = 0
+      end
+    end
+    object ELastPrixAchat: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 4
+      KeyboardType = NumbersAndPunctuation
+      ReadOnly = True
+      TextSettings.HorzAlign = Trailing
+      Position.Y = 143.000000000000000000
+      Size.Width = 339.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Prix Unitaire'
+      object Label2: TLabel
+        Align = Left
+        Size.Width = 120.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Prix unitaire :'
+        TabOrder = 0
+      end
+    end
+    object ElastQteAchat: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 3
+      KeyboardType = NumberPad
+      TextSettings.HorzAlign = Trailing
+      Position.Y = 165.000000000000000000
+      Size.Width = 339.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Qt'#233' par carton'
+      object Label3: TLabel
+        Align = Left
+        Size.Width = 120.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Qte par Carton :'
+        TabOrder = 0
+      end
+    end
+    object Eprixcarton: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 10
+      ReadOnly = True
+      TextSettings.HorzAlign = Trailing
+      Position.Y = 187.000000000000000000
+      Size.Width = 339.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Prix de carton'
+      object Label4: TLabel
+        Align = Left
+        Size.Width = 120.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Prix du carton :'
+        TabOrder = 0
+      end
+    end
+    object EQtePreAchat: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 2
+      KeyboardType = NumberPad
+      TextSettings.HorzAlign = Trailing
+      Position.Y = 209.000000000000000000
+      Size.Width = 339.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Qt'#233' de carton'
+      object Label5: TLabel
+        Align = Left
+        Size.Width = 120.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Qte de carton :'
+        TabOrder = 0
+      end
+    end
+    object BValid: TButton
+      Align = Top
+      Position.Y = 231.000000000000000000
+      Size.Width = 339.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Valider'
+    end
+    object Button2: TButton
+      Align = Top
+      Position.Y = 264.000000000000000000
+      Size.Width = 339.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'priortoolbutton'
+      TabOrder = 1
+      Text = 'Button2'
+    end
+  end
+  object BarcodeScanner1: TBarcodeScanner
+    BarcodeTypes = [btOneD, btQRCode, btProduct, btDataMatrix]
+    Left = 48
+    Top = 468
+  end
+end

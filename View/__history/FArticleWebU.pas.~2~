@@ -54,7 +54,6 @@ type
     StringColumn7: TStringColumn;
     StringColumn8: TStringColumn;
     MenuBar1: TMenuBar;
-    Bselect: TButton;
 
 //    Procedure AfficherArt;
 //    Procedure AfficherArts;
@@ -64,7 +63,6 @@ type
     procedure BRechercheClick(Sender: TObject);
     procedure BFermerClick(Sender: TObject);
     procedure StringGrid1CellClick(const Column: TColumn; const Row: Integer);
-    procedure BselectClick(Sender: TObject);
   private
 
   public
@@ -79,7 +77,7 @@ implementation
 
 uses
   REST.Json,  REST.Types, StringUtilsU, System.JSON,
-   MainU, APIUtilsU, ArticleWebDAOU, BarCodeWebDAOU;
+   MainU, APIUtilsU, ArticleWebDAOU;
 
 {$R *.fmx}
 
@@ -199,26 +197,6 @@ begin
   end;
 end;
 
-end;
-
-procedure TFArticleWeb.BselectClick(Sender: TObject);
-var
-oArticleWebDTO:TArticleWEBDTO;
-
-begin
-if StringGrid1.Cells[0,selectedRowArt]<>'' then
-begin
-  oArticleWebDTO:=TArticleWebDTO.create;
-  oArticleWebDTO.idarticle:=StringGrid1.Cells[0,StringGrid1.Row];
-  TArticleWebDAO.create.loadData(oArticleWebDTO.idarticle);
-  Main.oTFBonLiv.oMRBonLiv.EdesArticle.text:=TArticleWebDAO.create.loadData(oArticleWebDTO.idarticle).desarticle;
-  Main.oTFBonLiv.oMRBonLiv.ELastPrixAchat.text:=FloatToStr(TArticleWebDAO.create.loadData(oArticleWebDTO.idarticle).lastprixachat);
-  Main.oTFBonLiv.oMRBonLiv.ElastQteAchat.text:=FloatToStr(TArticleWebDAO.create.loadData(oArticleWebDTO.idarticle).lastqteachat);
-  //Main.oTFBonLiv.oMRBonLiv.EidBarCode.text:=TBarCodeWebDAO.create.get;
-  oArticleWebDTO.DisposeOf;
-  main.TabControl1.ActiveTab:=Main.TMAJAchat;
-  Self.DisposeOf;
- end;
 end;
 
 end.

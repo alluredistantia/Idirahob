@@ -218,7 +218,7 @@ begin
   oArticleWebDTO.DisposeOf;
   main.TabControl1.ActiveTab:=Main.TMAJAchat;
   Self.DisposeOf;
- end;
+
 end;
 
 end.

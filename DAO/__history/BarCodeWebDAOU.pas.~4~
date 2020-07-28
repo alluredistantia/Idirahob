@@ -23,7 +23,7 @@ function saveWeb:integer;
 function deleteWeb:integer;
 function getBarCodes: TListBarCodeWeb;
 function getNbrBarCodeWeb:integer;
-function getArticleWebDTO:TArticleWebDTO;
+function getArticleWebDTO(obarcodewebdto:TBarCodeWebDTO):TArticleWebDTO;
 function isExistWeb:Boolean;
 
 //function getListBarCodeLoc:TlistBarCodeLoc;

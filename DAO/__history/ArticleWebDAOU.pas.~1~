@@ -18,7 +18,6 @@ function getNbrLike(str:string):integer;
 function getListByText(textLike:string):TLisTArticleWebDTO;
 function getArticles:TLisTArticleWebDTO;
 function getMaxIdArticle: string;
-function loadData(idart:string):TArticleWebDTO;
 
 
 
@@ -109,12 +108,6 @@ end;
 
 
 
-
-Function TArticleWebDAO.loadData(idart:string):TArticleWebDTO;
-begin
-Result:=TJSON.JsonToObject<TArticleWebDTO>(RestReqGet.create(nil,'Article/getArticleById/'+idart).Response.JSONValue.ToString);
-
-end;
 
 function TArticleWebDAO.getMaxIdArticle: string;
 begin

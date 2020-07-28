@@ -18,7 +18,7 @@ type TArticleWebDTO=class
     procedure Setprixvente(const Value: double);
     procedure Setqtestock(const Value: double);
     procedure Setuart(const Value: string);
-  public
+  published
 
     property lastprixachat: double read Flastprixachat write Setlastprixachat;
     property lastqteachat: double read Flastqteachat write Setlastqteachat;
@@ -48,11 +48,6 @@ begin
 Self.idarticle:=id;
 end;
 
-
-constructor TArticleWebDTO.create;
-begin
-
-end;
 
 procedure TArticleWebDTO.Setdesarticle(const Value: string);
 begin

@@ -26,7 +26,6 @@ uses
   MBarCodeWebU in 'View\MBarCodeWebU.pas' {MBarCodeWeb: TFrame},
   BarCodeLocDAOU in 'DAO\BarCodeLocDAOU.pas',
   MBarCodeLocU in 'View\MBarCodeLocU.pas' {MBarCodeLoc: TFrame},
-  MRPreAchatU in 'View\MRPreAchatU.pas' {MRPreAchat: TFrame},
   MPreAchatU in 'View\MPreAchatU.pas' {MPreAchat: TFrame},
   BarCodeLocDTOU in 'Model\BarCodeLocDTOU.pas',
   FInventU in 'View\FInventU.pas' {FInvent: TFrame},
@@ -45,7 +44,9 @@ uses
   FourWebDTOU in 'Model\FourWebDTOU.pas',
   MBonLivU in 'View\MBonLivU.pas' {MBonLiv: TFrame},
   FArticleWebU in 'View\FArticleWebU.pas' {FArticleWeb: TFrame},
-  FourWebDAOU in 'DAO\FourWebDAOU.pas';
+  FourWebDAOU in 'DAO\FourWebDAOU.pas',
+  MRPreAchatU in 'View\MRPreAchatU.pas' {MRPreAchat: TFrame},
+  MRBonLivU in 'View\MRBonLivU.pas' {MRBonLiv: TFrame};
 
 {$R *.res}
 

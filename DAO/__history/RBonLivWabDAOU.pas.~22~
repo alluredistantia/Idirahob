@@ -1,18 +1,18 @@
 unit RBonLivWabDAOU;
 
 interface
-uses RBonLivWebDTOU, System.Generics.Collections, FourWebDTOU, BarCodeWebDTOU;
+uses RBonLivWebDTOU, System.Generics.Collections, FourWebDTOU;
 type RBonLivListDTO=TObjectList<TRBonLivWebDTO>;
 type TRBonLivWebDAO=class (TObject)
-FRBonLivWebDTO:TRBonLivWebDTO;
+
 public
 function getNewId:integer;
 function save(vRBonLivWebDTO:TRBonLivWebDTO): integer;
 function getRBonLivsByBonLiv(vBonLiv:integer): RBonLivListDTO;
 function getNbrRBonLivsByBonLiv(vBonLiv:integer): integer;
-function delete(orBonLivDTO:TRBonLivWebDTO): integer;
-function deleteAll(idbonliv:Integer): integer;
-function getBarcodewebDTO:TBarCodeWebDTO;
+function delete: integer;
+function deleteAll: integer;
+
 function getNbr: integer;
 end;
 
@@ -50,24 +50,6 @@ begin
 end;
 
 
-
-function TRBonLivWebDAO.delete(orBonLivDTO:TRBonLivWebDTO): integer;
-begin
- //Result:=strtoint(RestReqGet.create(nil,'rBonLiv/delRBonLiv'+orBonLivDTO).Response.JSONValue.ToString);
-
-end;
-
-function TRBonLivWebDAO.deleteAll(idbonliv:Integer): integer;
-begin
- //Result:=strtoint(RestReqGet.create(nil,'rBonLiv/delRBonLivbyBonLiv'+idbonliv).Response.JSONValue.ToString);
-
-end;
-
-function TRBonLivWebDAO.getBarcodewebDTO: TBarCodeWebDTO;
-begin
-Result:=TJSON.JsonToObject<TBarCodeWebDTO>(RestReqGet.create(nil,'rBonLiv/getBarCode/'+Self.FRBonLivWebDTO.idrbonliv.ToString).Response.JSONValue.ToString);
-
-end;
 
 function TRBonLivWebDAO.getNbr: integer;
 begin

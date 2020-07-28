@@ -79,7 +79,7 @@ implementation
 
 uses
   REST.Json,  REST.Types, StringUtilsU, System.JSON,
-   MainU, APIUtilsU, ArticleWebDAOU, BarCodeWebDAOU;
+   MainU, APIUtilsU, ArticleWebDAOU;
 
 {$R *.fmx}
 
@@ -214,11 +214,12 @@ begin
   Main.oTFBonLiv.oMRBonLiv.EdesArticle.text:=TArticleWebDAO.create.loadData(oArticleWebDTO.idarticle).desarticle;
   Main.oTFBonLiv.oMRBonLiv.ELastPrixAchat.text:=FloatToStr(TArticleWebDAO.create.loadData(oArticleWebDTO.idarticle).lastprixachat);
   Main.oTFBonLiv.oMRBonLiv.ElastQteAchat.text:=FloatToStr(TArticleWebDAO.create.loadData(oArticleWebDTO.idarticle).lastqteachat);
-  //Main.oTFBonLiv.oMRBonLiv.EidBarCode.text:=TBarCodeWebDAO.create.get;
-  oArticleWebDTO.DisposeOf;
+  Main.oTFBonLiv.oMRBonLiv.EidBarCode.text:=TBarCodeWebDAO.create.;
+//   ShowMessage(TArticleLocDAO.create.getFirstBarCodeLocDTO(oArticleLocDTO).idbarcodeloc);
+  oArticleLocDTO.DisposeOf;
   main.TabControl1.ActiveTab:=Main.TMAJAchat;
   Self.DisposeOf;
- end;
+
 end;
 
 end.

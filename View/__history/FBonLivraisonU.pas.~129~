@@ -94,7 +94,6 @@ procedure TFBonLivraison.AfficherDetail(sg:TStringGrid;vbonlivWebDTO:TBonLivWebD
  var
   RBonLivList:TListRBonLivWebDTO;
   ORBonLivWebDTO:TRBonLivWebDTO;
-  obarCodeWebDTO:TbarCodeWebDTO;
   i:Integer;
   vNbr:integer;
 begin
@@ -114,12 +113,10 @@ begin
 
   i:=0;
   for ORBonLivWebDTO in RBonLivList do
-
   begin
-    obarCodeWebDTO:=TbarCodeWebDTO.create(ORBonLivWebDTO.idbarcode);
     sg.Cells[0,i]:=IntToStr(ORBonLivWebDTO.idrbonliv);
     sg.Cells[1,i]:=ORBonLivWebDTO.idbarcode;
-    sg.Cells[2,i]:=TBarCodeWebDAO.create(obarCodeWebDTO).getArticleWebDTO.desarticle;
+    sg.Cells[2,i]:=TBarCodeWebDAO.create.getArticleWebDTO(TbarCodeWebDTO.create(ORBonLivWebDTO.idbarcode)).desarticle;
     sg.Cells[3,i]:=FloatToStr(ORBonLivWebDTO.qtebonliv);
     sg.Cells[4,i]:=FloatToStr(ORBonLivWebDTO.prixbonliv);
      //oBarCodeWebDAO:=TBarCodeWebDAO.create(oBarCodeDTO).getArticleWebDTO;
